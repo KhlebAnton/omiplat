@@ -514,7 +514,8 @@ a {
     .header__nav {
         position: absolute;
         left: 20px;
-        top:100%;
+        right: 20px;;
+        top:calc(100% + 10px);
         box-shadow: 3px 4px 12px 0px #788DB830;
        
         border-radius: 12px;
