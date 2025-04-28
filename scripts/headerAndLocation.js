@@ -138,6 +138,42 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     setupLocationSelection();
     setupConfirmButton();
+
+    const headerMenuBtn = document.querySelector('.header__menu_btn');
+
+    headerMenuBtn.addEventListener('click', ()=> {
+        headerMenuBtn.classList.add('open');
+        setTimeout(()=> {
+            headerMenuBtn.classList.remove('open');
+        },2000)
+    })
+
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownItems.forEach(el => {
+        el.addEventListener('click', ()=> {
+            el.classList.add('open');
+            setTimeout(()=> {
+                el.classList.remove('open');
+            },2000)
+        })
+    });
+
+    const headerPhone = document.querySelector('.header_phone-content');
+    const headerPhoneLink = headerPhone.querySelector('.header_phone-link');
+    headerPhoneLink.addEventListener('click', (e) => {
+        // Проверяем, является ли устройство мобильным (ширина экрана меньше 992px)
+        if (window.innerWidth < 992) {
+            if (!headerPhone.classList.contains('open')) {
+                e.preventDefault();
+                headerPhone.classList.add('open');
+                setTimeout(() => {
+                    headerPhone.classList.remove('open');
+                }, 2000);
+            }
+        }
+        // На ПК ничего не делаем - ссылка сработает как обычно
+    });
 });
 function deleteCookie(name) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
