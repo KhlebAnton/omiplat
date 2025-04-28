@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчики событий для выбора локации
     function setupLocationSelection() {
         const locationOptions = modalLocationSelect.querySelectorAll('.location__option');
-        
+
         locationOptions.forEach(option => {
             option.addEventListener('click', () => {
                 selectLocationOption(option.dataset.location);
@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик для кнопки подтверждения выбора
     function setupConfirmButton() {
         const confirmBtn = modalLocationSelect.querySelector('.btn-primary');
-        
+
         confirmBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             if (selectedLocation) {
                 setCookie(COOKIE_NAME, selectedLocation, 30);
                 updateLocationName(selectedLocation);
@@ -141,39 +141,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerMenuBtn = document.querySelector('.header__menu-nav');
 
-    headerMenuBtn.addEventListener('click', ()=> {
+    headerMenuBtn.addEventListener('click', () => {
         headerMenuBtn.classList.add('open');
-        setTimeout(()=> {
+        setTimeout(() => {
             headerMenuBtn.classList.remove('open');
-        },2000)
+        }, 2000)
     })
 
     const dropdownItems = document.querySelectorAll('.dropdown-item');
 
     dropdownItems.forEach(el => {
-        el.addEventListener('click', ()=> {
+        el.addEventListener('click', () => {
             el.classList.add('open');
-            setTimeout(()=> {
+            setTimeout(() => {
                 el.classList.remove('open');
-            },2000)
+            }, 2000)
         })
     });
 
-    const headerPhone = document.querySelector('.header_phone-content');
-    const headerPhoneLink = headerPhone.querySelector('.header_phone-link');
+    const headerPhoneContent = document.querySelector('.header_phone-content');
+    const headerPhoneLink = headerPhoneContent.querySelector('.header_phone-link');
     headerPhoneLink.addEventListener('click', (e) => {
         // Проверяем, является ли устройство мобильным (ширина экрана меньше 992px)
-        if (window.innerWidth < 992) {
-            if (!headerPhone.classList.contains('open')) {
+        if (window.innerWidth < 1400) {
+            if (!headerPhoneContent.classList.contains('open')) {
                 e.preventDefault();
-                headerPhone.classList.add('open');
+                headerPhoneContent.classList.add('open');
                 setTimeout(() => {
-                    headerPhone.classList.remove('open');
+                    headerPhoneContent.classList.remove('open');
                 }, 2000);
             }
         }
         // На ПК ничего не делаем - ссылка сработает как обычно
     });
+
+    const headerPhone = document.querySelector('.header_phone');
+    headerPhone.addEventListener('click', () => {
+        if (!headerPhone.classList.contains('open')) {
+            headerPhone.classList.add('open');
+            btnMenu.classList.remove('open');
+        } else {
+            headerPhone.classList.remove('open');
+        }
+    });
+
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+        if (!btnMenu.classList.contains('open')) {
+            btnMenu.classList.add('open');
+            headerPhone.classList.remove('open');
+        } else {
+            btnMenu.classList.remove('open');
+        }
+    });
+
+    const mobileDropdown = document.querySelectorAll('.mobile_nav-dropdown');
+
+    mobileDropdown.forEach(el=> {
+        el.addEventListener('click', ()=> {
+            el.classList.toggle('open')
+        })
+    })
 });
 function deleteCookie(name) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';

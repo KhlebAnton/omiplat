@@ -11,21 +11,78 @@
 <body>
     <header class="header">
         <div class="header-content container">
+            <div class="btn-menu"></div>
+            <div class="menu_mobile">
+                <span class="location-name location-with-icon">Новопокровская</span>
+                <nav class="mobile_nav" aria-label="Мобильная навигация">
+                    <ol class="mobile_nav-list">
+                        <li>
+                            <a class="mobile_nav-item" href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="mobile_nav-item mobile_nav-dropdown ">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                
+                            </div>
+                            <ol class="mobile_nav-dropdown-list">
+                                <li>
+                                    <a class="mobile_nav-item" href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Вакансии</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Документы</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="menu_mobile-footer">
+                    <div class="social-links">
+                        <a class="social-links__item vk" href="#"></a>
+                        <a class="social-links__item odn" href="#"></a>
+                        <a class="social-links__item tg" href="#"></a>
+                    </div>
+                    <a href="tel:+79612100566">8 (861) 210-05-66</a>
+                    
+                </div>
+            </div>
             <a href="#" class="logo_wrapper">
                 <img class="logo_img" src="./img/logo.svg" alt="Логотип">
             </a>
             <div class="header__menu">
-                
+
                 <nav class="header__menu-nav" aria-label="Навигация в шапке">
                     <div class="header__menu_btn  header__nav-item">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 3.33333H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 8H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12.6667H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            
+                            <path d="M2 3.33333H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 8H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12.6667H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
                         <span>Меню</span>
-                       
+
                     </div>
                     <ol class="header__nav">
                         <li>
@@ -92,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="location">
                     <span class="location-name location-with-icon">Новопокровская</span>
@@ -140,8 +197,8 @@
                         </a>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary">
-                    Личный кабинет
+                <a href="#" class="btn btn-primary btn-user">
+                    <span>Личный кабинет</span>
                 </a>
             </div>
         </div>
