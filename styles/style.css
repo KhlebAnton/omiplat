@@ -489,19 +489,26 @@ a {
 .header__menu_btn svg path {
     transition: .2s;
 }
-.header__menu-nav.open .header__menu_btn svg path,
-.header__menu-nav:hover .header__menu_btn svg path {
+.header__menu-nav.open .header__menu_btn svg path {
     stroke: var(--color-primary-light);
 }
-.header__menu-nav.open .header__menu_btn ,
-.header__menu-nav:hover .header__menu_btn  {
+.header__menu-nav.open .header__menu_btn {
     color: var(--color-primary-light);
 }
-.header__menu-nav.open .header__nav,
-.header__menu-nav:hover .header__nav{
+.header__menu-nav:hover  .header__menu_btn svg path {
+    stroke: var(--color-primary-light);
+}
+.header__menu-nav:hover  .header__menu_btn {
+    color: var(--color-primary-light);
+}
+.header__menu-nav.open .header__nav{
  opacity: 1;
  pointer-events: all;
 }
+.header__nav:hover{
+    opacity: 1;
+    pointer-events: all;
+   }
 
 @media (max-width:1451px) {
     .header__nav {

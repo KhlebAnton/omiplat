@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLocationSelection();
     setupConfirmButton();
 
-    const headerMenuBtn = document.querySelector('.header__menu_btn');
+    const headerMenuBtn = document.querySelector('.header__menu-nav');
 
     headerMenuBtn.addEventListener('click', ()=> {
         headerMenuBtn.classList.add('open');
