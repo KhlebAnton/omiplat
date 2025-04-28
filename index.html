@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <a href="#" class="logo_wrapper">
+                <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__menu">
+                <nav class="header__menu-nav" aria-label="Навигация в шапке">
+                    <ol class="header__nav">
+                        <li>
+                            <a class="header__nav-item" href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="header__nav-item dropdown-item">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <ol class="dropdown-menu__list">
+                                    <li>
+                                        <a class="header__nav-item" href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Вакансии</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Новости</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Документы</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="header_phone">
+                    <div class="header_phone-content">
+                        <a class="header_phone-link" href="tel:+79612100566">8 (861) 210-05-66</a>
+                        <div class="header_phone-dropdown">
+                            <a href="#" class="btn btn-call">Заказать звонок</a>
+                            <ol class="header_phone-dropdown__list">
+                                <li>
+                                    <span class="link_item-title">Доп. телефон</span>
+                                    <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Электронная почта</span>
+                                    <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Время работы</span>
+                                    <span>с 7:00 до 01:00</span>
+                                </li>
+                            </ol>
+                            <div class="social-links">
+                                <a class="social-links__item vk" href="#"></a>
+                                <a class="social-links__item odn" href="#"></a>
+                                <a class="social-links__item tg" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+                    <div class="modal_location modal_location-ask hidden">
+                        <div class="modal_location-ask__text">
+                            <span>Ваше местоположение</span>
+                            <span class="text-color">ст. <span class="location-name">Новопокровская</span>?</span>
+                        </div>
+                        <div class="modal_location-ask__btns">
+                            <a href="#" class="btn btn-primary">
+                                Да
+                            </a>
+                            <a href="#" class="btn btn-primary">Нет</a>
+                        </div>
+                    </div>
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">
+                    Личный кабинет
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="./scripts/headerAndLocation.js"></script>
+</body>
+
+</html>
