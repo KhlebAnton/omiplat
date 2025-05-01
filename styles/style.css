@@ -86,7 +86,16 @@ a {
     z-index: 10;
 
 }
-
+.main::after {
+    content: '';
+    width: 1249px;
+    height: 1131px;
+    position: absolute;
+    background: url(../img/blur_main.png) 100% / contain no-repeat;
+    right: 0;
+    top: 1630px;
+    pointer-events: none;
+}
 .header__nav {
     list-style: none;
     font-size: 18px;
@@ -1348,6 +1357,48 @@ display: none;
 .swiper-pagination_plans {
     display: none;
 }
+
+
+.advantages__item-img {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    left: 20px;
+    top: -56px;
+}
+.icon_rocket {
+  background: url('../img/icon_rocket.svg') 50% / contain no-repeat;   
+}
+.icon_like {
+    background: url('../img/icon_llike.svg') 50% / contain no-repeat;   
+}
+.icon_rem {
+    background: url('../img/icon_rem.svg') 50% / contain no-repeat;   
+}
+.advantages__items {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.advantages__item {
+    position: relative;
+    padding: 40px  20px ;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 12px 0px #788DB830;
+border-radius: 12px;
+}
+.advantages__item-title {
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+.advantages__item-text {
+    font-size: 16px;
+    color: #444444;
+}
 @media (max-width: 1600px) {
     .section_hero::before {
         background: linear-gradient(to right,
@@ -1475,6 +1526,12 @@ display: none;
        justify-content: center;
        margin-top: 30px;
     }
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 1px;
+    }
+    .main::after {
+        display: none;
+    }
 }
 
 @media (max-width:988px) {
@@ -1509,7 +1566,7 @@ display: none;
     .header__menu .location .location-name.location-with-icon {
         display: none;
     }
-
+    
     .menu_mobile .location {
         display: block;
     }
@@ -1702,6 +1759,13 @@ display: none;
         padding-bottom: 60px;
 
     }
+    .advantages__items {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+    .advantages__item-title {
+        font-size: 18px;
+    }
 }
 
 @media (max-width:768px) {
@@ -1824,8 +1888,16 @@ display: none;
     }
     .swiper-container_plans .swiper-slide {
         height: 395px;
+        max-width: 300px;
     }
     .plan-card__stat {
         font-size: 12px;
+    }
+    .plans__tabs {
+        width: 100%;
+    }
+    .plans__tab {
+        flex-grow: 2;
+        text-align: center;
     }
 }

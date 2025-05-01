@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/style.css">
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=0b32d4c2-0b41-432b-b281-fd74cad9cce5&lang=ru_RU"></script>
 </head>
 
 <body>
@@ -895,11 +897,51 @@
 
             </div>
         </section>
+        <section class="section_advantages">
+            <div class="container">
+                <h2>Преимущества</h2>
+                <div class="advantages__items">
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_rocket"></div>
+                        <div class="advantages__item-title">
+                            Стабильная и безлимитная связь
+                        </div>
+                        <div class="advantages__item-text">
+                            Забудьте о перебоях и ограничениях трафика — ваш интернет работает, как часы, в любое время суток
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_like"></div>
+                        <div class="advantages__item-title">
+                            Простое подключение без забот
+                        </div>
+                        <div class="advantages__item-text">
+                            Быстрое и легкое подключение без лишних сложностей — оставьте заявку, а мы заботимся обо всем остальном
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_rem"></div>
+                        <div class="advantages__item-title">
+                            Удобное управление тарифами
+                        </div>
+                        <div class="advantages__item-text">
+                            Автоплатеж, обещанный платеж и «заморозка» лицевого счета для легкого управления услугами и контроля ваших расходов
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_map">
+            <div class="container">
+                <div id="map" class="map" style="width: 600px; height: 400px"></div>
+            </div>
+        </section>
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/headerAndLocation.js"></script>
     <script src="./scripts/heroSwiper.js"></script>
     <script src="./scripts/plansSwiper.js"></script>
+    <script src="./scripts/map.js"></script>
 </body>
 
 </html>
