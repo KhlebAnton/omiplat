@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const modalLocationAsk = document.querySelector('.modal_location-ask');
-    const modalLocationSelect = document.querySelector('.modal_location-select');
     const locationNameElements = document.querySelectorAll('.location-name');
     const COOKIE_NAME = 'user_location';
     let selectedLocation = null;
 
+    // Attach click handlers to all location name elements
     locationNameElements.forEach(el => {
-        el.addEventListener('click', showModalLocatSelect)
-    })
-    // Функции для работы с cookies
+        el.addEventListener('click', () => showModalLocatSelect(el));
+    });
+
+    // Cookie functions
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     }
 
-    // Функции для работы с модальными окнами
+    // Modal functions
     function showModalLocatAsk() {
         modalLocationAsk.classList.remove('hidden');
     }
@@ -43,29 +44,44 @@ document.addEventListener('DOMContentLoaded', () => {
         modalLocationAsk.classList.add('hidden');
     }
 
-    function showModalLocatSelect() {
-        // Перед показом модального окна выбираем активную локацию из cookies
+    function showModalLocatSelect(el) {
+        // Find the modal that's a sibling of the clicked location name
+        const modalLocationSelect = el.closest('.location').querySelector('.modal_location-select');
+        
+        // Before showing, select the active location from cookies
         const savedLocation = getCookie(COOKIE_NAME);
         if (savedLocation) {
-            selectLocationOption(savedLocation);
+            selectLocationOption(savedLocation, modalLocationSelect);
+        } else {
+            // If no cookie, select the current location (text of the clicked element)
+            const currentLocation = el.textContent.trim();
+            selectLocationOption(currentLocation, modalLocationSelect);
         }
+        
+        // Hide all other select modals first
+        hideModalLocatSelect();
+        
+        // Show this specific modal
         modalLocationSelect.classList.remove('hidden');
+        
+        // Setup event listeners for this specific modal
+        setupModalSelectListeners(modalLocationSelect);
     }
 
     function hideModalLocatSelect() {
-        modalLocationSelect.classList.add('hidden');
+        document.querySelectorAll('.modal_location-select').forEach(modal => {
+            modal.classList.add('hidden');
+        });
     }
 
-    // Обновляем все элементы с названием локации
     function updateLocationName(location) {
         locationNameElements.forEach(el => {
             el.textContent = location;
         });
     }
 
-    // Выбираем опцию локации
-    function selectLocationOption(location) {
-        const locationOptions = modalLocationSelect.querySelectorAll('.location__option');
+    function selectLocationOption(location, modal) {
+        const locationOptions = modal.querySelectorAll('.location__option');
         locationOptions.forEach(option => {
             option.classList.remove('active');
             if (option.dataset.location === location) {
@@ -75,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Проверяем cookie при загрузке страницы
     function checkLocationCookie() {
         const location = getCookie(COOKIE_NAME);
         if (location) {
@@ -85,24 +100,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Обработчики событий для выбора локации
-    function setupLocationSelection() {
-        const locationOptions = modalLocationSelect.querySelectorAll('.location__option');
-
+    function setupModalSelectListeners(modal) {
+        // Setup option selection
+        const locationOptions = modal.querySelectorAll('.location__option');
         locationOptions.forEach(option => {
             option.addEventListener('click', () => {
-                selectLocationOption(option.dataset.location);
+                selectLocationOption(option.dataset.location, modal);
             });
         });
-    }
 
-    // Обработчик для кнопки подтверждения выбора
-    function setupConfirmButton() {
-        const confirmBtn = modalLocationSelect.querySelector('.btn-primary');
-
+        // Setup confirm button
+        const confirmBtn = modal.querySelector('.btn-primary');
         confirmBtn.addEventListener('click', (e) => {
             e.preventDefault();
-
             if (selectedLocation) {
                 setCookie(COOKIE_NAME, selectedLocation, 30);
                 updateLocationName(selectedLocation);
@@ -113,31 +123,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Обработчики событий для кнопок
     function setupEventListeners() {
-        // Обработчик для кнопки "Да"
+        // Yes button in ask modal
         const yesBtn = modalLocationAsk.querySelector('.btn-primary:first-child');
-        yesBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const currentLocation = document.querySelector('.location-name').textContent;
-            setCookie(COOKIE_NAME, currentLocation, 30);
-            hideModalLocatAsk();
-        });
+        if (yesBtn) {
+            yesBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentLocation = document.querySelector('.location-name').textContent.trim();
+                setCookie(COOKIE_NAME, currentLocation, 30);
+                hideModalLocatAsk();
+            });
+        }
 
-        // Обработчик для кнопки "Нет"
+        // No button in ask modal
         const noBtn = modalLocationAsk.querySelector('.btn-primary:last-child');
-        noBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            hideModalLocatAsk();
-            showModalLocatSelect();
-        });
+        if (noBtn) {
+            noBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                hideModalLocatAsk();
+                // Show the first location select modal
+                if (locationNameElements.length > 0) {
+                    showModalLocatSelect(locationNameElements[1]);
+                }
+            });
+        }
     }
 
-    // Инициализация
+    // Initialize
     checkLocationCookie();
     setupEventListeners();
-    setupLocationSelection();
-    setupConfirmButton();
+
 
     const headerMenuBtn = document.querySelector('.header__menu-nav');
 

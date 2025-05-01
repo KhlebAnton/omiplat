@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -13,7 +14,41 @@
         <div class="header-content container">
             <div class="btn-menu"></div>
             <div class="menu_mobile">
-                <span class="location-name location-with-icon">Новопокровская</span>
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
                 <nav class="mobile_nav" aria-label="Мобильная навигация">
                     <ol class="mobile_nav-list">
                         <li>
@@ -36,7 +71,7 @@
                                     <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                
+
                             </div>
                             <ol class="mobile_nav-dropdown-list">
                                 <li>
@@ -61,8 +96,32 @@
                         <a class="social-links__item odn" href="#"></a>
                         <a class="social-links__item tg" href="#"></a>
                     </div>
-                    <a href="tel:+79612100566">8 (861) 210-05-66</a>
-                    
+                    <a class="menu_mobile-footer__tel" href="tel:+79612100566">8 (861) 210-05-66</a>
+                    <ol class="header_phone-dropdown__list">
+                        <li>
+                            <span class="link_item-title">Доп. телефон</span>
+
+                        </li>
+                        <li>
+                            <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Эл. почта</span>
+
+                        </li>
+                        <li>
+                            <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Время работы:</span>
+
+                        </li>
+                        <li>
+                            <span>с 7:00 до 01:00</span>
+                        </li>
+                    </ol>
+                    <a href="#" class="btn btn-call">Заказать звонок</a>
+
                 </div>
             </div>
             <a href="#" class="logo_wrapper">
@@ -203,9 +262,644 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <section class="section_hero">
+            <div class="hero-content container">
+                <div class="hero__info">
+                    <h1 class="hero__title">Подключите домашний интернет от Омиплат</h1>
+                    <p class="hero__text">
+                        Высокоскоростной интернет и цифровое ТВ без ограничений – все, что нужно для вашего комфорта
+                    </p>
+                    <a href="#" class="btn btn-secondary btn_wifi">Подключить</a>
+                </div>
+                <div class="swiper-button-prev_hero"></div>
+                <div class="swiper-button-next_hero"></div>
+            </div>
+            <div class="swiper-container_img">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./img/hero_img/1_mob.png">
+                            <source media="(min-width: 768px)" srcset="./img/hero_img/1.png">
+                            <img class="slider_bg-photo" src="./img/hero_img/1.png" alt="Семья">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./img/hero_img/2_mob.png">
+                            <source media="(min-width: 768px)" srcset="./img/hero_img/2.png">
+                            <img class="slider_bg-photo" src="./img/hero_img/2.png" alt="Семья">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./img/hero_img/3_mob.png">
+                            <source media="(min-width: 768px)" srcset="./img/hero_img/3.png">
+                            <img class="slider_bg-photo" src="./img/hero_img/3.png" alt="Семья">
+                        </picture>
+                    </div>
 
+                </div>
 
+                <div class="swiper-pagination_hero"></div>
+            </div>
+        </section>
+        <section class="section_home-internet">
+            <div class="home-internet_content container">
+                <div class="home-internet__img">
+                    <div class="home-internet__img__buble">Надежный</div>
+                    <div class="home-internet__img__buble">Для работы</div>
+                    <div class="home-internet__img__buble">Быстрый</div>
+                    <div class="home-internet__img__buble buble_icon "></div>
+                    <div class="home-internet__img__buble buble_icon white_icon"></div>
+                </div>
+                <div class="home-internet__info">
+                    <h2>Домашний интернет до 300 мб/с</h2>
+                    <p>Надежный и быстрый интернет для комфортной работы, учебы и развлечений без перебоев.</p>
+                    <a href="#" class="btn btn-third">Подробнее</a>
+                </div>
+            </div>
+        </section>
+        <section class="section_digital-tv">
+            <div class="digital-tv__content container">
+                <div class="digital-tv__top">
+                    <div class="digital-tv__info">
+                        <h2>Цифровое телевидение</h2>
+                        <p>
+                            Оцените высокое качество изображения и звука с цифровым телевидением. Сотни каналов на любой
+                            вкус, включая HD и тематические подборки. Управляйте просмотром с функциями паузы, записи и
+                            архива передач. Подключайтесь и наслаждайтесь любимыми фильмами и шоу в любое время!
+                        </p>
+
+                    </div>
+                    <a href="#" class="btn btn-third">Подробнее</a>
+
+                </div>
+                <div class="digital-tv__items">
+                    <div class="digital-tv__item">
+                        <div class="digital-tv__item-img icon-camera">
+
+                        </div>
+                        <div class="digital-tv__item-title">
+                            4 онлайн-кинотеатра
+                        </div>
+                    </div>
+                    <div class="digital-tv__item">
+                        <div class="digital-tv__item-img icon-docks">
+
+                        </div>
+                        <div class="digital-tv__item-title">
+                            14 дней архива
+                        </div>
+                    </div>
+                    <div class="digital-tv__item">
+                        <div class="digital-tv__item-img icon-tv">
+
+                        </div>
+                        <div class="digital-tv__item-title">
+                            До 390 TV каналов
+                        </div>
+                    </div>
+                    <div class="digital-tv__item">
+                        <div class="digital-tv__item-img icon-acc">
+
+                        </div>
+                        <div class="digital-tv__item-title">
+                            Один аккаунт – до 5 устройств
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_plans">
+            <div class="plans__content container">
+                <div class="plans__top">
+                    <div class="plans__info">
+                        <h2>Тарифы</h2>
+                        <div>
+                            <span>Выберите тариф для подключения в</span>
+                            <div class="location">
+                                <span class="location-name location-with-icon">Новопокровская</span>
+                                <div class="modal_location modal_location-select hidden">
+                                    <div class="modal_location-select__title">
+                                        Выберите ваше местоположение
+                                    </div>
+                                    <div class="modal_location-select__options">
+                                        <div class="location__option" data-location="Брюховецкая">
+                                            Брюховецкая
+                                        </div>
+                                        <div class="location__option active" data-location="Новопокровская">
+                                            Новопокровская
+                                        </div>
+                                        <div class="location__option" data-location="Белая">
+                                            Белая
+                                        </div>
+                                        <div class="location__option" data-location="Отрадная">
+                                            Отрадная
+                                        </div>
+                                        <div class="location__option" data-location="Казанская">
+                                            Казанская
+                                        </div>
+                                        <div class="location__option" data-location="Платнировская">
+                                            Платнировская
+                                        </div>
+                                        <div class="location__option" data-location="Кавказская">
+                                            Кавказская
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">
+                                        Подтвердить
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans__tabs">
+                        <div class="plans__tab" data-tab="internet">Интернет</div>
+                        <div class="plans__tab active" data-tab="internet+tv">Интернет + TV</div>
+                    </div>
+                </div>
+                <div class="swiper-container_plans" data-tab-active="internet+tv">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Сильвер Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        690 ₽/мес
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150 Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card top-color-dark">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__title">
+                                            Сильвер + Комбо Микс + Amediateka Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 302 каналов + Amediateka 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                       
+                                        <span>1149 ₽/мес</span>
+                                        
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Сильвер
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        690 ₽/мес
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-dark">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__title">
+                                            Сильвер + Комбо Микс + Amediateka
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 302 каналов + Amediateka 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                       
+                                        <span>1149 ₽/мес</span>
+                                        
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910 ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <a href="#" class="btn btn-primary pocet-plans"></a>
+                                        <a href="#" class="btn btn-third">Подключить</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination_plans"></div>
+                </div>
+                <div class="swiper-btn-group">
+                    <div class="swiper-button-prev_plans"></div>
+                    <div class="swiper-button-next_plans"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/headerAndLocation.js"></script>
+    <script src="./scripts/heroSwiper.js"></script>
+    <script src="./scripts/plansSwiper.js"></script>
 </body>
 
 </html>
