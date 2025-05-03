@@ -1399,6 +1399,32 @@ border-radius: 12px;
     font-size: 16px;
     color: #444444;
 }
+.section_map {
+    padding-top: 122px;
+    padding-bottom: 155px;
+}
+.map_content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+.map {
+    max-width: 751px;
+    height: 300px;
+    width: 100%;
+}
+.map_info {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    gap: 12px;
+}
+.map_info .btn {
+    margin-top: 24px;
+    width: fit-content;
+}
 @media (max-width: 1600px) {
     .section_hero::before {
         background: linear-gradient(to right,
