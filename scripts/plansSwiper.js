@@ -52,6 +52,7 @@ modalChannels.addEventListener('click', (e) => {
 function showChannelModal() {
     modalChannels.classList.add('open');
     document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
     document.querySelector('#category-list li.active')?.classList.remove('active');
     document.querySelectorAll('.channel-item').forEach(item => {
 
@@ -62,6 +63,7 @@ function showChannelModal() {
 function hideChannelModal() {
     modalChannels.classList.remove('open');
     document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
 }
 
 modalChannels.querySelector('.modal-channels__close').addEventListener('click', () => {

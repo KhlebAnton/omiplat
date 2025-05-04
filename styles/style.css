@@ -36,7 +36,9 @@ html {
     color: var(--color-dark-black);
     background-color: var(--color-bg);
 }
-
+html.no-scroll {
+    overflow: hidden;
+}
 body.no-scroll {
     overflow: hidden;
     padding-right: 18px;
@@ -2776,6 +2778,7 @@ height: fit-content;
     body {
         overflow-x: hidden;
     }
+
     body.no-scroll {
         overflow: hidden;
         padding-right: 0;

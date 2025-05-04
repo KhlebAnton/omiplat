@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showModalLocatAsk() {
         if (window.innerWidth < 990) {
             document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
         }
         
         modalLocationAsk.classList.remove('hidden');
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideModalLocatAsk() {
         modalLocationAsk.classList.add('hidden');
         document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     }
 
     function showModalLocatSelect(el) {
@@ -74,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function hideModalLocatSelect() {
         document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
         document.querySelectorAll('.modal_location-select').forEach(modal => {
             modal.classList.add('hidden');
         });
@@ -108,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupModalSelectListeners(modal) {
         if (window.innerWidth < 990) {
             document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
         }
         // Setup option selection
         const locationOptions = modal.querySelectorAll('.location__option');
@@ -204,9 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
             headerPhone.classList.add('open');
             btnMenu.classList.remove('open');
             document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
         } else {
             headerPhone.classList.remove('open');
             document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
         }
     });
 
@@ -215,10 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btnMenu.classList.contains('open')) {
             btnMenu.classList.add('open');
             document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
             headerPhone.classList.remove('open');
         } else {
             btnMenu.classList.remove('open');
             document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
         }
     });
 
