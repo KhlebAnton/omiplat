@@ -36,7 +36,13 @@ html {
     color: var(--color-dark-black);
     background-color: var(--color-bg);
 }
-
+body.no-scroll {
+    overflow: hidden;
+    padding-right: 18px;
+}
+body.no-scroll header {
+    padding-right: 18px;
+}
 h1,
 h2,
 h3,
@@ -210,7 +216,9 @@ a {
     position: relative;
     z-index: 1;
 }
-
+.header_phone-link:hover {
+    color: var(--color-primary-dark);
+}
 .header_phone-link::after {
     width: 24px;
     height: 24px;
@@ -266,6 +274,7 @@ a {
     transition: .2s;
     flex-shrink: 0;
     width: fit-content;
+    cursor: pointer;
 }
 
 .btn-call {
@@ -362,7 +371,9 @@ a {
     min-width: 195px;
 
 }
-
+.location-name:hover {
+    color: var(--color-primary-dark);
+}
 .location-name.location-with-icon::before {
     content: '';
     display: block;
@@ -1840,6 +1851,71 @@ select::marker {
     align-items: center;
     gap: 20px;
 }
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #a7a8aa00;
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+    z-index: 10;
+    padding: 10px;
+    
+
+    transition: .3s;
+}
+.modal.open {
+    pointer-events: all;
+    backdrop-filter: blur(20px);
+    background: #A7A8AA66;
+   
+}
+.modal.open .modal-form__content {
+    transform: translateY(0);
+}
+.modal-form__content {
+    padding: 40px;
+    background: #F6F7FB;
+    border-radius: 24px;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    position: relative;
+    transform: translateY(200%);
+    transition: .5s;
+}
+.modal-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('../img/icon_close-modal.svg') 50% / contain no-repeat;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+.modal__title {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+.btn-modal-form {
+    color: #ffffff;
+    background: #6294F9;
+    max-width: 171px;
+}
+.btn-modal-form:hover {
+    background-color: var(--color-primary-dark);
+}
+.modal .form-policy{
+    color: #A7A8AA;
+}
+.modal .form {
+    font-size: 16px;
+}
 @media (max-width: 1600px) {
     .section_hero::before {
         background: linear-gradient(to right,
@@ -2556,5 +2632,20 @@ select::marker {
     .footer  .social-links__item.tg::after {
         width: 21px;
         height: 18px;
+    }
+    .modal {
+        overflow-y: auto;
+    }
+  
+    .modal__title {
+        font-size: 20px;
+    }
+    .modal-form__content {
+        padding: 20px 10px;
+        border-radius: 12px;
+    }
+    .modal-close {
+        top: 10px;
+        right: 10px;
     }
 }

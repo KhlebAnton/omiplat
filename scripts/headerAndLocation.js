@@ -31,20 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    function deleteCookie(name) {
-        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    }
+   
 
     // Modal functions
     function showModalLocatAsk() {
+        if (window.innerWidth < 990) {
+            document.body.classList.add('no-scroll');
+        }
+        
         modalLocationAsk.classList.remove('hidden');
     }
 
     function hideModalLocatAsk() {
         modalLocationAsk.classList.add('hidden');
+        document.body.classList.remove('no-scroll');
     }
 
     function showModalLocatSelect(el) {
+       
         // Find the modal that's a sibling of the clicked location name
         const modalLocationSelect = el.closest('.location').querySelector('.modal_location-select');
         
@@ -69,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function hideModalLocatSelect() {
+        document.body.classList.remove('no-scroll');
         document.querySelectorAll('.modal_location-select').forEach(modal => {
             modal.classList.add('hidden');
         });
@@ -101,6 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setupModalSelectListeners(modal) {
+        if (window.innerWidth < 990) {
+            document.body.classList.add('no-scroll');
+        }
         // Setup option selection
         const locationOptions = modal.querySelectorAll('.location__option');
         locationOptions.forEach(option => {
@@ -195,8 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!headerPhone.classList.contains('open')) {
             headerPhone.classList.add('open');
             btnMenu.classList.remove('open');
+            document.body.classList.add('no-scroll');
         } else {
             headerPhone.classList.remove('open');
+            document.body.classList.remove('no-scroll');
         }
     });
 
@@ -204,9 +214,11 @@ document.addEventListener('DOMContentLoaded', () => {
     btnMenu.addEventListener('click', () => {
         if (!btnMenu.classList.contains('open')) {
             btnMenu.classList.add('open');
+            document.body.classList.add('no-scroll');
             headerPhone.classList.remove('open');
         } else {
             btnMenu.classList.remove('open');
+            document.body.classList.remove('no-scroll');
         }
     });
 

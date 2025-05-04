@@ -1,6 +1,7 @@
 // mask phone
-const phoneError = document.getElementById('phoneErr')
-const phoneInput = document.getElementById('phone');
+const form = document.getElementById('form');
+const phoneError = form.querySelector('.phone_error')
+const phoneInput = form.querySelector('input[name="phone"]');
 phoneInput.addEventListener('input', function (e) {
     let value = e.target.value.replace(/\D/g, '');
     let formattedValue = '';
@@ -37,7 +38,7 @@ phoneInput.addEventListener('keydown', function (e) {
 });
 
 
-document.getElementById('form').addEventListener('submit', function (event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
     const phoneValue = phoneInput.value.replace(/\D/g, '');
     if (phoneValue.length === 11) {
