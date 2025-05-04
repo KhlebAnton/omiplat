@@ -965,12 +965,131 @@
                 <div id="map" class="map"></div>
             </div>
         </section>
+        <section class="section_cash">
+            <div class="cash_content container">
+                <div class="cash_info">
+                    <h2>Кэшбэк до <span class="cash-precent">10%</span>  за оплату услуг</h2>
+                    <p>
+                        Оплачивайте услуги вовремя — и получайте Платинум Бонусы в знак благодарности за вашу лояльность! 
+                    </p>
+                    <a href="#" class=" btn btn-secondary">Подробнее</a>
+                </div>
+               
+            </div>
+        </section>
+        <section class="section_app">
+            <div class="app_content container">
+                <div class="app_info">
+                    <h2>Управляйте услугами легко и удобно через приложение</h2>
+                    <p>Смена тарифа, пополнение счета, подключение и отключение услуги, отслеживание бонусов – всего в несколько кликов.</p>
+                    <div class="app__qr-items">
+                        <div class="app__qr qr_ios"></div>
+                        <div class="app__qr qr_andr"></div>
+                    </div>
+                    <div class="links_app">
+                        <a href="#" class="link_app link-ios"></a>
+                        <a href="#" class="link_app link-andr"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_form">
+            <div class="form_container">
+                <h2>Проверить возможность подключения</h2>
+                <p>
+                    География нашей сети постоянно расширяется
+                </p>
+                <form id="form" class="form">
+                    <div class="form-wrapper">
+                        <label class="form-label">
+                            <span>Имя</span>
+                            <input type="text" name="name" placeholder="Имя" required>
+                        </label>
+                        <label class="form-label">
+                            <span>Телефон</span>
+                            <input type="text" id="phone" name="phone" placeholder="Телефон" required> 
+                            <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
+                        </label>
+                        <label class="form-label">
+                            <span>Населенный пункт</span>
+                            <select name="city" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:</option>
+                                <option value="ru">Город 1</option>
+                                <option value="us">Город 2</option>
+                                <option value="de">Город 3</option>
+                              </select>
+                        </label>
+                        <label class="form-label">
+                            <span>Интересующая услуга</span>
+                            <select name="option" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Интересующая услуга:</option>
+                                <option value="u1">Услуга 1</option>
+                                <option value="u2">Услуга 2</option>
+                                <option value="u3">Услуга 3</option>
+                              </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-form">Проверить</button>
+                    <div class="form-policy">
+                        Нажимая кнопку «Проверить», я даю свое согласие 
+на <a href="#">обработку персональных данных</a>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer_content container">
+            <div class="footer__info">
+                <a href="#" class="logo_wrapper">
+                    <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+                </a>
+                <p>
+                    Омиплат — региональный интернет-провайдер, предоставляющий надежное подключение к интернету для физических и юридических лиц и интерактивное телевидение. 
+                </p>
+                <div class="links_app">
+                    <a href="#" class="link_app link-ios"></a>
+                    <a href="#" class="link_app link-andr"></a>
+                </div>
+            </div>
+            <div class="footer_links">
+                <a href="#" class="footer-link">Интернет</a>
+                <a href="#" class="footer-link">Телевидение</a>
+                <a href="#" class="footer-link">Для бизнеса</a>
+                <a href="#" class="footer-link">Кэшбэк</a>
+                <a href="#" class="footer-link">О компании</a>
+                <a href="#" class="footer-link">Вакансии</a>
+                <a href="#" class="footer-link">Новости</a>
+                <a href="#" class="footer-link">Документы</a>
+            </div>
+            <div class="footer_contacts">
+                <a href="tel:+78612100566" class="footer__tel">8 (861) 210-05-66</a>
+                <a href="tel:+78612187876" class="footer__tel">8 (861) 218-78-76</a>
+                <a href="mailto:support@omiplat.ru" class="footer__mail">support@omiplat.ru</a>
+                <div class="social-links">
+                    <a class="social-links__item vk" href="#"></a>
+                    <a class="social-links__item odn" href="#"></a>
+                    <a class="social-links__item tg" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <span class="copyright">© 2025 ООО «ОМИПЛАТ» Все права защищены</span>
+            <a href="#" class="footer__politick-link">Политика обработки персональных данных </a>
+            <a href="#" class="footer__develops">
+                <span>Разработано в </span>
+                <img class="develop_img" src="./img/logo_develop.png" alt="Лого Разработчика">
+            </a>
+        </div>
+    </footer>
+
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/headerAndLocation.js"></script>
     <script src="./scripts/heroSwiper.js"></script>
     <script src="./scripts/plansSwiper.js"></script>
     <script src="./scripts/map.js"></script>
+    <script src="./scripts/form.js"></script>
 </body>
 
 </html>
