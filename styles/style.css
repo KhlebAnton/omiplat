@@ -109,6 +109,7 @@ a {
     right: 0;
     top: 1630px;
     pointer-events: none;
+    z-index: -1;
 }
 
 .header__nav {
