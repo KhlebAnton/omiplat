@@ -2335,7 +2335,9 @@ select::marker {
 
 @media (max-width:768px) {
     
-
+    body {
+        overflow-x: hidden;
+    }
     .hero__info .btn {
         margin-top: 20px;
         width: 100%;
