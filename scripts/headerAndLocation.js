@@ -188,32 +188,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerPhoneContent = document.querySelector('.header_phone-content');
     const headerPhoneLink = headerPhoneContent.querySelector('.header_phone-link');
-    headerPhoneLink.addEventListener('click', (e) => {
-        // Проверяем, является ли устройство мобильным (ширина экрана меньше 992px)
-        if (window.innerWidth < 1400) {
-            if (!headerPhoneContent.classList.contains('open')) {
-                e.preventDefault();
-                headerPhoneContent.classList.add('open');
-                setTimeout(() => {
-                    headerPhoneContent.classList.remove('open');
-                }, 2000);
-            }
-        }
-        // На ПК ничего не делаем - ссылка сработает как обычно
-    });
+    // headerPhoneLink.addEventListener('click', (e) => {
+    //     // Проверяем, является ли устройство мобильным (ширина экрана меньше 992px)
+    //     if (window.innerWidth < 1400) {
+    //         if (!headerPhoneContent.classList.contains('open')) {
+    //             e.preventDefault();
+    //             headerPhoneContent.classList.add('open');
+    //             setTimeout(() => {
+    //                 headerPhoneContent.classList.remove('open');
+    //             }, 2000);
+    //         }
+    //     }
+    //     // На ПК ничего не делаем - ссылка сработает как обычно
+    // });
 
     const headerPhone = document.querySelector('.header_phone');
-    headerPhone.addEventListener('click', () => {
-        if (!headerPhone.classList.contains('open')) {
-            headerPhone.classList.add('open');
-            btnMenu.classList.remove('open');
-            document.body.classList.add('no-scroll');
-            document.documentElement.classList.add('no-scroll');
-        } else {
-            headerPhone.classList.remove('open');
-            document.body.classList.remove('no-scroll');
-            document.documentElement.classList.remove('no-scroll');
+    headerPhone.addEventListener('touchstart', () => {
+        if (window.innerWidth < 989) {
+            if (!headerPhone.classList.contains('open')) {
+                headerPhone.classList.add('open');
+                btnMenu.classList.remove('open');
+                document.body.classList.add('no-scroll');
+                document.documentElement.classList.add('no-scroll');
+            } else {
+                headerPhone.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+                document.documentElement.classList.remove('no-scroll');
+            }
         }
+        
     });
 
     const btnMenu = document.querySelector('.btn-menu');
