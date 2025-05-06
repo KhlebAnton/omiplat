@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <div class="btn-menu"></div>
+            <div class="menu_mobile">
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
+                <nav class="mobile_nav" aria-label="Мобильная навигация">
+                    <ol class="mobile_nav-list">
+                        <li>
+                            <a class="mobile_nav-item " href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item " href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item active" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="mobile_nav-item mobile_nav-dropdown ">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <ol class="mobile_nav-dropdown-list">
+                                <li>
+                                    <a class="mobile_nav-item" href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Вакансии</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Документы</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="menu_mobile-footer">
+                    <div class="social-links">
+                        <a class="social-links__item vk" href="#"></a>
+                        <a class="social-links__item odn" href="#"></a>
+                        <a class="social-links__item tg" href="#"></a>
+                    </div>
+                    <a class="menu_mobile-footer__tel" href="tel:+79612100566">8 (861) 210-05-66</a>
+                    <ol class="header_phone-dropdown__list">
+                        <li>
+                            <span class="link_item-title">Доп. телефон</span>
+
+                        </li>
+                        <li>
+                            <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Эл. почта</span>
+
+                        </li>
+                        <li>
+                            <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Время работы:</span>
+
+                        </li>
+                        <li>
+                            <span>с 7:00 до 01:00</span>
+                        </li>
+                    </ol>
+                    <div class="btn btn-call" onclick="showFormModal('Заказать звонок')">Заказать звонок</div>
+
+                </div>
+            </div>
+            <a href="#" class="logo_wrapper">
+                <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__menu">
+
+                <nav class="header__menu-nav" aria-label="Навигация в шапке">
+                    <div class="header__menu_btn  header__nav-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 3.33333H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 8H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12.6667H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Меню</span>
+
+                    </div>
+                    <ol class="header__nav">
+                        <li>
+                            <a class="header__nav-item " href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item " href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item active" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="header__nav-item dropdown-item">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <ol class="dropdown-menu__list">
+                                    <li>
+                                        <a class="header__nav-item" href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Вакансии</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Новости</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Документы</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="header_phone">
+                    <div class="header_phone-content">
+                        <div class="header_phone-link">
+                            <a href="tel:+79612100566">8 (861) 210-05-66</a>
+                        </div>
+
+                        <div class="header_phone-dropdown">
+                            <div class="btn btn-call" onclick="showFormModal('Заказать звонок')">Заказать звонок</div>
+                            <ol class="header_phone-dropdown__list">
+                                <li>
+                                    <span class="link_item-title">Доп. телефон</span>
+                                    <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Электронная почта</span>
+                                    <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Время работы</span>
+                                    <span>с 7:00 до 01:00</span>
+                                </li>
+                            </ol>
+                            <div class="social-links">
+                                <a class="social-links__item vk" href="#"></a>
+                                <a class="social-links__item odn" href="#"></a>
+                                <a class="social-links__item tg" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+                    <div class="modal_location modal_location-ask hidden">
+                        <div class="modal_location-ask__text">
+                            <span>Ваше местоположение</span>
+                            <span class="text-color">ст. <span class="location-name">Новопокровская</span>?</span>
+                        </div>
+                        <div class="modal_location-ask__btns">
+                            <a href="#" class="btn btn-primary">
+                                Да
+                            </a>
+                            <a href="#" class="btn btn-primary">Нет</a>
+                        </div>
+                    </div>
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-user">
+                    <span>Личный кабинет</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section_hero hero_without_btn">
+            <div class="hero-content container">
+                <div class="hero__info">
+                    <h1 class="hero__title">Получайте бонусы <br>
+                        за своевременную оплату</h1>
+                    <p class="hero__text">
+                        Возвращайте до 10% на свой счет и оплачивайте <br>
+                        услуги связи и IPTV бонусами.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-container_img">
+
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/hero_img/cash_mob.png">
+                    <source media="(min-width: 768px)" srcset="./img/hero_img/cash.png">
+                    <img class="slider_bg-photo" src="./img/hero_img/cash.png" alt="Семья">
+                </picture>
+
+
+            </div>
+        </section>
+        <section class="section_banner banner__cash">
+            <div class="banner_content container">
+                <div class="banner__img ">
+                    <div class="banner__img__buble">Бонус!</div>
+                    <div class="banner__img__buble">1 бонус = 1 ₽</div>
+                    <div class="banner__img__buble buble_icon "></div>
+                </div>
+                <div class="banner__info">
+                    <h2>Что такое Платинум Бонус?</h2>
+                    <p>Платинум Бонус — это программа лояльности для наших абонентов. Вы получаете бонусы за
+                        своевременную оплату услуг связи, которые затем можно использовать для оплаты до 100% стоимости
+                        наших услуг. </p>
+                    <div class="text_highlighted">1 Платинум Бонус = 1 ₽</div>
+                </div>
+            </div>
+        </section>
+        <section class="section_advantages">
+            <div class="container">
+                <h2>Как это работает?</h2>
+                <div class="advantages__items">
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_card"></div>
+                        <div class="advantages__item-title">
+                            Своевременная оплата
+                        </div>
+                        <div class="advantages__item-text">
+                            Оплачивайте услуги связи до 1-го числа каждого месяца
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_check"></div>
+                        <div class="advantages__item-title">
+                            Начисление бонусов
+                        </div>
+                        <div class="advantages__item-text">
+                            За каждую своевременную оплату мы начисляем вам Платинум Бонусы
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_coin"></div>
+                        <div class="advantages__item-title">
+                            Использование бонусов
+                        </div>
+                        <div class="advantages__item-text">
+                            Накопленные бонусы можно использовать для оплаты наших услуг
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_bonus">
+            <div class="bonus_content container">
+                <h2>Сколько Платинум Бонусов можно получить?</h2>
+                <p class="section_text">
+                    Размер начисляемых бонусов зависит от вашего населенного пункта и условий программы.
+                </p>
+                <div class="location-wrapper">
+                    <span>Выберите тариф для подключения в</span>
+                    <div class="location">
+                        <span class="location-name location-with-icon">Новопокровская</span>
+                        <div class="modal_location modal_location-select hidden">
+                            <div class="modal_location-select__title">
+                                Выберите ваше местоположение
+                            </div>
+                            <div class="modal_location-select__options">
+                                <div class="location__option" data-location="Брюховецкая">
+                                    Брюховецкая
+                                </div>
+                                <div class="location__option active" data-location="Новопокровская">
+                                    Новопокровская
+                                </div>
+                                <div class="location__option" data-location="Белая">
+                                    Белая
+                                </div>
+                                <div class="location__option" data-location="Отрадная">
+                                    Отрадная
+                                </div>
+                                <div class="location__option" data-location="Казанская">
+                                    Казанская
+                                </div>
+                                <div class="location__option" data-location="Платнировская">
+                                    Платнировская
+                                </div>
+                                <div class="location__option" data-location="Кавказская">
+                                    Кавказская
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">
+                                Подтвердить
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus_items">
+                    <div class="bonus_item">
+                        <div class="bonus_item__top">
+                            <span class="bonus_item-precent">
+                                1%
+                            </span>
+                            <h3>
+                                Платинум Бонус Ультра Стандартный
+                            </h3>
+                        </div>
+                        <div class="bonus_item-info">
+                            <span class="bonus_item-info__title">
+                                Как получить:
+                            </span>
+                            <p>
+                                Оплатите услуги связи на сумму от 600 рублей через СБП и получите бонусные баллы — 1%
+                                от суммы платежа.
+                            </p>
+                        </div>
+                        <div class="bonus_item__bottom">
+                            <div class="text_highlighted">Один балл = один рубль скидки!</div>
+                        </div>
+
+                    </div>
+                    <div class="bonus_item">
+                        <div class="bonus_item__top">
+                            <span class="bonus_item-precent">
+                                <span class="bonus_item-precent_before">до</span>4%
+                            </span>
+                            <h3>
+                                Платинум Бонус <br>
+                                Ультра Повышенный
+                            </h3>
+                        </div>
+                        <div class="bonus_item-info">
+                            <span class="bonus_item-info__title">
+                                Как получить:
+                            </span>
+                            <p>
+                                Получите дополнительные бонусные баллы - от 1% до 4% от суммы платежа в зависимости от
+                                времени нахождения в статусе "Активный"
+                            </p>
+                        </div>
+                        <div class="bonus_item__bottom">
+                            <div class="text_highlighted">Один балл = один рубль скидки!</div>
+                            <div class="btn btn-third btn-bonus">Подробнее</div>
+                        </div>
+                        <div class="bonus_item-hidden">
+                            <table class="bonus_item-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="bonus_item-table__head-item">
+                                                Срок непрерывного своевременного внесения платежей за пользование услугами связи (календарных месяцев)
+                                            </div>
+
+                                        </th>
+                                        <th>
+                                            <div class="bonus_item-table__head-item">
+                                                Размер Кэшбэка (процент от суммы начислений по договору об оказании услуг связи данного Участника за прошлый календарный месяц)
+                                            </div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                6
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                1%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                12
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                1,5%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                24
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                2%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                36
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                2,5%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                48
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                3%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                68
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="bonus_item-table__body-item">
+                                                4%
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_steps step_bonus">
+            <div class="steps_content container">
+                <div class="steps_top">
+                    <h2>Как использовать Платинум Бонусы?</h2>
+                    <a href="#" class="btn btn-secondary">Подробная инструкция</a>
+                </div>
+                <div class="steps__items">
+                    <div class="steps__item">
+                        
+                        <h4 class="steps__item-title">
+                            Вход в личный кабинет
+                        </h4>
+                        <p class="steps__item-text">
+                            Перейдите в Личный кабинет абонента.
+                        </p>
+                    </div>
+                    <div class="steps__item">
+                       
+                        <h4 class="steps__item-title">
+                            Выбор скидки
+                        </h4>
+                        <p class="steps__item-text">
+                            В разделе «Договор» выберите «Тарифные опции», затем — «Доступные».
+                        </p>
+                    </div>
+                    <div class="steps__item">
+                        
+                        <h4 class="steps__item-title">
+                            Активация скидки
+                        </h4>
+                        <p class="steps__item-text">
+                            Выберите подходящую скидку и активируйте её. Сумма, необходимая для активации тарифа на следующий период, уменьшится на сумму выбранной скидки.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="section_questions">
+            <div class="question_content container">
+                <h2>Вопросы/ответы</h2>
+                <div class="question__items">
+                    <div class="question__item ">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="load-more-container">
+                        <div class="load-more-btn">Показать еще</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_form">
+            <div class="form_container">
+                <h2>Проверить возможность подключения</h2>
+                <p>
+                    География нашей сети постоянно расширяется
+                </p>
+                <form id="form" class="form">
+                    <div class="form-wrapper">
+                        <label class="form-label">
+                            <span>Имя</span>
+                            <input type="text" name="name" placeholder="Имя" required>
+                        </label>
+                        <label class="form-label">
+                            <span>Телефон</span>
+                            <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+                            <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
+                        </label>
+                        <label class="form-label">
+                            <span>Населенный пункт</span>
+                            <select name="city" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:
+                                </option>
+                                <option value="ru">Город 1</option>
+                                <option value="us">Город 2</option>
+                                <option value="de">Город 3</option>
+                            </select>
+                        </label>
+                        <label class="form-label">
+                            <span>Интересующая услуга</span>
+                            <select name="option" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Интересующая
+                                    услуга:</option>
+                                <option value="u1">Услуга 1</option>
+                                <option value="u2">Услуга 2</option>
+                                <option value="u3">Услуга 3</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-form">Проверить</button>
+                    <div class="form-policy">
+                        Нажимая кнопку «Проверить», я даю свое согласие
+                        на <a href="#">обработку персональных данных</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_content container">
+            <div class="footer__info">
+                <a href="#" class="logo_wrapper">
+                    <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+                </a>
+                <p>
+                    Омиплат — региональный интернет-провайдер, предоставляющий надежное подключение к интернету для
+                    физических и юридических лиц и интерактивное телевидение.
+                </p>
+                <div class="links_app">
+                    <a href="#" class="link_app link-ios"></a>
+                    <a href="#" class="link_app link-andr"></a>
+                </div>
+            </div>
+            <div class="footer_links">
+                <a href="#" class="footer-link">Интернет</a>
+                <a href="#" class="footer-link">Телевидение</a>
+                <a href="#" class="footer-link">Для бизнеса</a>
+                <a href="#" class="footer-link">Кэшбэк</a>
+                <a href="#" class="footer-link">О компании</a>
+                <a href="#" class="footer-link">Вакансии</a>
+                <a href="#" class="footer-link">Новости</a>
+                <a href="#" class="footer-link">Документы</a>
+            </div>
+            <div class="footer_contacts">
+                <a href="tel:+78612100566" class="footer__tel">8 (861) 210-05-66</a>
+                <a href="tel:+78612187876" class="footer__tel">8 (861) 218-78-76</a>
+                <a href="mailto:support@omiplat.ru" class="footer__mail">support@omiplat.ru</a>
+                <div class="social-links">
+                    <a class="social-links__item vk" href="#"></a>
+                    <a class="social-links__item odn" href="#"></a>
+                    <a class="social-links__item tg" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <span class="copyright">© 2025 ООО «ОМИПЛАТ» Все права защищены</span>
+            <a href="#" class="footer__politick-link">Политика обработки персональных данных </a>
+            <a href="#" class="footer__develops">
+                <span>Разработано в </span>
+                <img class="develop_img" src="./img/logo_develop.png" alt="Лого Разработчика">
+            </a>
+        </div>
+    </footer>
+    <div class="modal modal-form_call">
+        <div class="modal-form__content">
+            <div class="modal-close"></div>
+            <div class="modal__title">
+                Заказать звонок
+            </div>
+            <form id="formModal" class="form">
+                <div class="form-wrapper">
+                    <label class="form-label">
+                        <span>Имя</span>
+                        <input type="text" name="name" placeholder="Имя" required>
+                    </label>
+                    <label class="form-label">
+                        <span>Телефон</span>
+                        <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+                        <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
+                    </label>
+                    <label class="form-label">
+                        <span>Населенный пункт</span>
+                        <select name="city" required>
+                            <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:
+                            </option>
+                            <option value="ru">Город 1</option>
+                            <option value="us">Город 2</option>
+                            <option value="de">Город 3</option>
+                        </select>
+                    </label>
+                    <label class="form-label">
+                        <span>Интересующая услуга</span>
+                        <select name="option" required>
+                            <option value="" disabled selected hidden class="placeholder-option">Интересующая услуга:
+                            </option>
+                            <option value="u1">Услуга 1</option>
+                            <option value="u2">Услуга 2</option>
+                            <option value="u3">Услуга 3</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-modal-form btn-form">Заказать звонок</button>
+                <div class="form-policy">
+                    Нажимая кнопку «Заказать звонок», я даю свое согласие
+                    на <a href="#">обработку персональных данных</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./scripts/headerAndLocation.js"></script>
+
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/form_modal.js"></script>
+    <script src="./scripts/question.js"></script>
+    <script src="./scripts/bonus.js"></script>
+</body>
+
+</html>

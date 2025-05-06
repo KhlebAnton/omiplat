@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <div class="btn-menu"></div>
+            <div class="menu_mobile">
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
+                <nav class="mobile_nav" aria-label="Мобильная навигация">
+                    <ol class="mobile_nav-list">
+                        <li>
+                            <a class="mobile_nav-item active" href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="mobile_nav-item" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="mobile_nav-item mobile_nav-dropdown ">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                            <ol class="mobile_nav-dropdown-list">
+                                <li>
+                                    <a class="mobile_nav-item" href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Вакансии</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a class="mobile_nav-item" href="#">Документы</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="menu_mobile-footer">
+                    <div class="social-links">
+                        <a class="social-links__item vk" href="#"></a>
+                        <a class="social-links__item odn" href="#"></a>
+                        <a class="social-links__item tg" href="#"></a>
+                    </div>
+                    <a class="menu_mobile-footer__tel" href="tel:+79612100566">8 (861) 210-05-66</a>
+                    <ol class="header_phone-dropdown__list">
+                        <li>
+                            <span class="link_item-title">Доп. телефон</span>
+
+                        </li>
+                        <li>
+                            <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Эл. почта</span>
+
+                        </li>
+                        <li>
+                            <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                        </li>
+                        <li>
+                            <span class="link_item-title">Время работы:</span>
+
+                        </li>
+                        <li>
+                            <span>с 7:00 до 01:00</span>
+                        </li>
+                    </ol>
+                    <div class="btn btn-call" onclick="showFormModal('Заказать звонок')">Заказать звонок</div>
+
+                </div>
+            </div>
+            <a href="#" class="logo_wrapper">
+                <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__menu">
+
+                <nav class="header__menu-nav" aria-label="Навигация в шапке">
+                    <div class="header__menu_btn  header__nav-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 3.33333H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 8H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12.6667H14" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                        <span>Меню</span>
+
+                    </div>
+                    <ol class="header__nav">
+                        <li>
+                            <a class="header__nav-item active" href="#">Интернет</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Телевидение</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Для бизнеса</a>
+                        </li>
+                        <li>
+                            <a class="header__nav-item" href="#">Кэшбэк</a>
+                        </li>
+                        <li>
+                            <div class="header__nav-item dropdown-item">
+                                <span>Еще</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6L8 10L12 6" stroke="#212121" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <ol class="dropdown-menu__list">
+                                    <li>
+                                        <a class="header__nav-item" href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Вакансии</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Новости</a>
+                                    </li>
+                                    <li>
+                                        <a class="header__nav-item" href="#">Документы</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="header_phone">
+                    <div class="header_phone-content">
+                        <div class="header_phone-link">
+                            <a href="tel:+79612100566">8 (861) 210-05-66</a>
+                        </div>
+
+                        <div class="header_phone-dropdown">
+                            <div class="btn btn-call" onclick="showFormModal('Заказать звонок')">Заказать звонок</div>
+                            <ol class="header_phone-dropdown__list">
+                                <li>
+                                    <span class="link_item-title">Доп. телефон</span>
+                                    <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Электронная почта</span>
+                                    <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                                </li>
+                                <li>
+                                    <span class="link_item-title">Время работы</span>
+                                    <span>с 7:00 до 01:00</span>
+                                </li>
+                            </ol>
+                            <div class="social-links">
+                                <a class="social-links__item vk" href="#"></a>
+                                <a class="social-links__item odn" href="#"></a>
+                                <a class="social-links__item tg" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="location">
+                    <span class="location-name location-with-icon">Новопокровская</span>
+                    <div class="modal_location modal_location-ask hidden">
+                        <div class="modal_location-ask__text">
+                            <span>Ваше местоположение</span>
+                            <span class="text-color">ст. <span class="location-name">Новопокровская</span>?</span>
+                        </div>
+                        <div class="modal_location-ask__btns">
+                            <a href="#" class="btn btn-primary">
+                                Да
+                            </a>
+                            <a href="#" class="btn btn-primary">Нет</a>
+                        </div>
+                    </div>
+                    <div class="modal_location modal_location-select hidden">
+                        <div class="modal_location-select__title">
+                            Выберите ваше местоположение
+                        </div>
+                        <div class="modal_location-select__options">
+                            <div class="location__option" data-location="Брюховецкая">
+                                Брюховецкая
+                            </div>
+                            <div class="location__option active" data-location="Новопокровская">
+                                Новопокровская
+                            </div>
+                            <div class="location__option" data-location="Белая">
+                                Белая
+                            </div>
+                            <div class="location__option" data-location="Отрадная">
+                                Отрадная
+                            </div>
+                            <div class="location__option" data-location="Казанская">
+                                Казанская
+                            </div>
+                            <div class="location__option" data-location="Платнировская">
+                                Платнировская
+                            </div>
+                            <div class="location__option" data-location="Кавказская">
+                                Кавказская
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">
+                            Подтвердить
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-user">
+                    <span>Личный кабинет</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section_hero">
+            <div class="hero-content container">
+                <div class="hero__info">
+                    <h1 class="hero__title">Домашний интернет<br>
+                        для всей семьи</h1>
+                    <p class="hero__text">
+                        Стабильное соединение, высокая скорость и надежность – будьте онлайн без ограничений.
+                    </p>
+                    <div class="btn btn-secondary btn_wifi" onclick="showFormModal('Подключиться')">Подключить</div>
+                </div>
+            </div>
+            <div class="swiper-container_img">
+
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/hero_img/internet_bgHero_mob.png">
+                    <source media="(min-width: 768px)" srcset="./img/hero_img/internet_bgHero.png">
+                    <img class="slider_bg-photo" src="./img/hero_img/internet_bgHero.png" alt="Семья">
+                </picture>
+
+
+            </div>
+        </section>
+        <section class="section_advantages">
+            <div class="container">
+                <h2>Преимущества</h2>
+                <div class="advantages__items grid-four">
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_rocket"></div>
+                        <div class="advantages__item-title">
+                            Скорость до 300 Мб/с
+                        </div>
+                        <div class="advantages__item-text">
+                            Работайте, играйте и смотрите видео без задержек и перебоев
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_infin"></div>
+                        <div class="advantages__item-title">
+                            Безлимитные тарифы
+                        </div>
+                        <div class="advantages__item-text">
+                            Не ограничивайте себя в интернете. Используйте столько, сколько нужно
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_support"></div>
+                        <div class="advantages__item-title">
+                            Техническая поддержка
+                        </div>
+                        <div class="advantages__item-text">
+                            Помощь и консультация технических специалистов по всем вопросам
+                        </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_gpon"></div>
+                        <div class="advantages__item-title">
+                            Технология GPON
+                        </div>
+                        <div class="advantages__item-text">
+                            Обеспечивает сверхвысокие скорости интернета и качественное телевидение
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_plans">
+            <div class="plans__content container">
+                <div class="plans__top">
+                    <div class="plans__info">
+                        <h2>Тарифы</h2>
+                        <div>
+                            <span>Выберите тариф для подключения в</span>
+                            <div class="location">
+                                <span class="location-name location-with-icon">Новопокровская</span>
+                                <div class="modal_location modal_location-select hidden">
+                                    <div class="modal_location-select__title">
+                                        Выберите ваше местоположение
+                                    </div>
+                                    <div class="modal_location-select__options">
+                                        <div class="location__option" data-location="Брюховецкая">
+                                            Брюховецкая
+                                        </div>
+                                        <div class="location__option active" data-location="Новопокровская">
+                                            Новопокровская
+                                        </div>
+                                        <div class="location__option" data-location="Белая">
+                                            Белая
+                                        </div>
+                                        <div class="location__option" data-location="Отрадная">
+                                            Отрадная
+                                        </div>
+                                        <div class="location__option" data-location="Казанская">
+                                            Казанская
+                                        </div>
+                                        <div class="location__option" data-location="Платнировская">
+                                            Платнировская
+                                        </div>
+                                        <div class="location__option" data-location="Кавказская">
+                                            Кавказская
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">
+                                        Подтвердить
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans__tabs">
+                        <div class="plans__tab" data-tab="internet">Интернет</div>
+                        <div class="plans__tab active" data-tab="internet+tv">Интернет + TV</div>
+                    </div>
+                </div>
+                <div class="swiper-container_plans" data-tab-active="internet+tv">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Сильвер Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        690 ₽/мес
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150 Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet">
+                            <div class="plan-card top-color-dark">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__title">
+                                            Сильвер + Комбо Микс + Amediateka Другой
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 302 каналов + Amediateka
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+
+                                        <span>1149 ₽/мес</span>
+
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Сильвер
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        690 ₽/мес
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-dark">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__title">
+                                            Сильвер + Комбо Микс + Amediateka
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 50 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 302 каналов + Amediateka
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+
+                                        <span>1149 ₽/мес</span>
+
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-tab="internet+tv">
+                            <div class="plan-card top-color-light">
+                                <div class="plan-card__content">
+                                    <div class="plan-card__top">
+                                        <div class="plan-card__hints">
+                                            <div class="plan-card__hint">Хит</div>
+                                            <div class="plan-card__hint">Новинка</div>
+                                        </div>
+                                        <div class="plan-card__title">
+                                            Драйв 150
+                                        </div>
+                                        <div class="plan-card__stats">
+                                            <div class="plan-card__stat stat_speed">
+                                                до 150 Мб/с
+                                            </div>
+                                            <div class="plan-card__stat stat_hd">
+                                                до 380 каналов (первые 90 дней)
+                                                <div class="info-hint">
+                                                    <div class="info-hint__text">Далее бесплатно все 1000 каналов :)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="plan-card__list">
+                                        <li>Безлимитный домашний интернет</li>
+                                        <li>Подключение в удобное время</li>
+                                        <li>Техническая поддержка</li>
+                                    </ul>
+                                    <div class="plan-card__price">
+                                        <div class="plan-card__price-old">541 ₽/мес</div>
+                                        <span>690 ₽/мес</span>
+                                        <div class="plan-card__price-hint">
+                                            <span>первые 3 месяца</span>
+                                            <div class="info-hint">
+                                                <div class="info-hint__text">Далее до 250 Мб/с + 268 ТВ-каналов за 910
+                                                    ₽/мес</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plan-card__btns">
+                                        <div class="btn btn-primary pocet-plans" onclick="showChannelModal()"></div>
+                                        <div class="btn btn-third" onclick="showFormModal('Подключиться')">Подключить
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination_plans"></div>
+                </div>
+                <div class="swiper-btn-group">
+                    <div class="swiper-button-prev_plans"></div>
+                    <div class="swiper-button-next_plans"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section_steps">
+            <div class="steps_content container">
+                <div class="steps_top">
+                    <h2>Этапы подключения интернета </h2>
+                    <div class="btn btn-secondary" onclick="showFormModal('Подключиться')">Подключиться</div>
+                </div>
+                <div class="steps__items">
+                    <div class="steps__item">
+                        <div class="steps__item-icon step_doc"></div>
+                        <h4 class="steps__item-title">
+                            Оставьте заявку
+                        </h4>
+                        <p class="steps__item-text">
+                            Заполните форму или позвоните нам
+                        </p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-icon step_phone"></div>
+                        <h4 class="steps__item-title">
+                            Согласование деталей
+                        </h4>
+                        <p class="steps__item-text">
+                            Мы свяжемся с вами для уточнения информации
+                        </p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-icon step_wifi"></div>
+                        <h4 class="steps__item-title">
+                            Подключение
+                        </h4>
+                        <p class="steps__item-text">
+                            Наш специалист установит оборудование и подключит интернет
+                        </p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-icon step_world"></div>
+                        <h4 class="steps__item-title">
+                            Пользуйтесь
+                        </h4>
+                        <p class="steps__item-text">
+                            Наслаждайтесь стабильным интернетом без ограничений
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_app">
+            <div class="app_content container">
+                <div class="app_info">
+                    <h2>Управляйте услугами легко и удобно через приложение</h2>
+                    <p>Смена тарифа, пополнение счета, подключение и отключение услуги, отслеживание бонусов – всего в
+                        несколько кликов.</p>
+                    <div class="app__qr-items">
+                        <div class="app__qr qr_ios"></div>
+                        <div class="app__qr qr_andr"></div>
+                    </div>
+                    <div class="links_app">
+                        <a href="#" class="link_app link-ios"></a>
+                        <a href="#" class="link_app link-andr"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_questions">
+            <div class="question_content container">
+                <h2>Вопросы/ответы</h2>
+                <div class="question__items">
+                    <div class="question__item ">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Как узнать, доступна ли услуга по моему адресу?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Можно ли изменить тарифный план после подключения?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Да, вы можете изменить тариф через личный кабинет или приложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question__item hidden-question">
+                        <div class="question__item-top">
+                            <h5>
+                                Есть ли скрытые платежи?
+                            </h5>
+                        </div>
+                        <div class="question__item-bottom">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequatur cupiditate
+                                atque quasi excepturi culpa officiis molestiae, deserunt eius voluptatibus porro ipsam
+                                maxime animi fuga ea labore est nihil a!
+                                Dolorem, nulla hic. Error aut quo earum nostrum porro suscipit quis ab explicabo enim,
+                                consequuntur perspiciatis inventore mollitia placeat odit ipsa incidunt maiores fugit
+                                eligendi, modi molestias nobis libero similique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="load-more-container">
+                        <div class="load-more-btn">Показать еще</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_form">
+            <div class="form_container">
+                <h2>Проверить возможность подключения</h2>
+                <p>
+                    География нашей сети постоянно расширяется
+                </p>
+                <form id="form" class="form">
+                    <div class="form-wrapper">
+                        <label class="form-label">
+                            <span>Имя</span>
+                            <input type="text" name="name" placeholder="Имя" required>
+                        </label>
+                        <label class="form-label">
+                            <span>Телефон</span>
+                            <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+                            <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
+                        </label>
+                        <label class="form-label">
+                            <span>Населенный пункт</span>
+                            <select name="city" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:
+                                </option>
+                                <option value="ru">Город 1</option>
+                                <option value="us">Город 2</option>
+                                <option value="de">Город 3</option>
+                            </select>
+                        </label>
+                        <label class="form-label">
+                            <span>Интересующая услуга</span>
+                            <select name="option" required>
+                                <option value="" disabled selected hidden class="placeholder-option">Интересующая
+                                    услуга:</option>
+                                <option value="u1">Услуга 1</option>
+                                <option value="u2">Услуга 2</option>
+                                <option value="u3">Услуга 3</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-form">Проверить</button>
+                    <div class="form-policy">
+                        Нажимая кнопку «Проверить», я даю свое согласие
+                        на <a href="#">обработку персональных данных</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_content container">
+            <div class="footer__info">
+                <a href="#" class="logo_wrapper">
+                    <img class="logo_img" src="./img/logo.svg" alt="Логотип">
+                </a>
+                <p>
+                    Омиплат — региональный интернет-провайдер, предоставляющий надежное подключение к интернету для
+                    физических и юридических лиц и интерактивное телевидение.
+                </p>
+                <div class="links_app">
+                    <a href="#" class="link_app link-ios"></a>
+                    <a href="#" class="link_app link-andr"></a>
+                </div>
+            </div>
+            <div class="footer_links">
+                <a href="#" class="footer-link">Интернет</a>
+                <a href="#" class="footer-link">Телевидение</a>
+                <a href="#" class="footer-link">Для бизнеса</a>
+                <a href="#" class="footer-link">Кэшбэк</a>
+                <a href="#" class="footer-link">О компании</a>
+                <a href="#" class="footer-link">Вакансии</a>
+                <a href="#" class="footer-link">Новости</a>
+                <a href="#" class="footer-link">Документы</a>
+            </div>
+            <div class="footer_contacts">
+                <a href="tel:+78612100566" class="footer__tel">8 (861) 210-05-66</a>
+                <a href="tel:+78612187876" class="footer__tel">8 (861) 218-78-76</a>
+                <a href="mailto:support@omiplat.ru" class="footer__mail">support@omiplat.ru</a>
+                <div class="social-links">
+                    <a class="social-links__item vk" href="#"></a>
+                    <a class="social-links__item odn" href="#"></a>
+                    <a class="social-links__item tg" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <span class="copyright">© 2025 ООО «ОМИПЛАТ» Все права защищены</span>
+            <a href="#" class="footer__politick-link">Политика обработки персональных данных </a>
+            <a href="#" class="footer__develops">
+                <span>Разработано в </span>
+                <img class="develop_img" src="./img/logo_develop.png" alt="Лого Разработчика">
+            </a>
+        </div>
+    </footer>
+    <div class="modal modal-form_call">
+        <div class="modal-form__content">
+            <div class="modal-close"></div>
+            <div class="modal__title">
+                Заказать звонок
+            </div>
+            <form id="formModal" class="form">
+                <div class="form-wrapper">
+                    <label class="form-label">
+                        <span>Имя</span>
+                        <input type="text" name="name" placeholder="Имя" required>
+                    </label>
+                    <label class="form-label">
+                        <span>Телефон</span>
+                        <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+                        <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
+                    </label>
+                    <label class="form-label">
+                        <span>Населенный пункт</span>
+                        <select name="city" required>
+                            <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:
+                            </option>
+                            <option value="ru">Город 1</option>
+                            <option value="us">Город 2</option>
+                            <option value="de">Город 3</option>
+                        </select>
+                    </label>
+                    <label class="form-label">
+                        <span>Интересующая услуга</span>
+                        <select name="option" required>
+                            <option value="" disabled selected hidden class="placeholder-option">Интересующая услуга:
+                            </option>
+                            <option value="u1">Услуга 1</option>
+                            <option value="u2">Услуга 2</option>
+                            <option value="u3">Услуга 3</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-modal-form btn-form">Заказать звонок</button>
+                <div class="form-policy">
+                    Нажимая кнопку «Заказать звонок», я даю свое согласие
+                    на <a href="#">обработку персональных данных</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-channels">
+        <div class="modal-channels__content">
+            <div class="modal-channels__top">
+                <div class="modal-channels__title">В пакет входит</div>
+                <div class="modal-channels__close"></div>
+            </div>
+            <div class="modal-channels__body">
+                <div class="modal-channels__categories">
+                    <ul id="category-list">
+                        <li data-category="entertainment">
+                            <div class="categories__top">
+                                Развлекательные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="educational">
+                            <div class="categories__top">
+                                Познавательные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="moviesAndSeries">
+                            <div class="categories__top">
+                                Кино и сериалы
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="essential">
+                            <div class="categories__top">
+                                Эфирные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="informational">
+                            <div class="categories__top">
+                                Информационные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="music">
+                            <div class="categories__top">
+                                Музыкальные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="kids">
+                            <div class="categories__top">
+                                Детские
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="regional">
+                            <div class="categories__top">
+                                Региональные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="sport">
+                            <div class="categories__top">
+                                Спортивные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="radio">
+                            <div class="categories__top">
+                                Радио
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="telemarketers">
+                            <div class="categories__top">
+                                Телемагазины
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <div class="modal-channels_hint">
+                        <div class="modal-channels__hint-title">
+                            Также включено
+                        </div>
+                        <div class="modal-channels__hint_info">
+                            <span>Мультискрин</span>
+                            <p>ТВ на смартфоне, планшете и ноутбуке – до 5 устройств</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-channels__grid">
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/360.png" alt="360">
+                        <span class="channel-item__title">
+                            360
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment music informational">
+                        <img src="./img/channels/tv8.png" alt="8 каналов">
+                        <span class="channel-item__title">
+                            8 каналов
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/sub.png" alt="Суббота!">
+                        <span class="channel-item__title">
+                            Суббота!
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="kids regional">
+                        <img src="./img/channels/bobr.png" alt="Бобер">
+                        <span class="channel-item__title">
+                            Бобер
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="regional">
+                        <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                        <span class="channel-item__title">
+                            КВН ТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/sarafan.png" alt="Сарафан">
+                        <span class="channel-item__title">
+                            Сарафан
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="music">
+                        <img src="./img/channels/tnt.png" alt="ТНТ">
+                        <span class="channel-item__title">
+                            ТНТ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment music">
+                        <img src="./img/channels/pyatnica.png" alt="Пятница">
+                        <span class="channel-item__title">
+                            Пятница
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/1.png" alt="Первый канал">
+                        <span class="channel-item__title">
+                            Первый канал
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment informational">
+                        <img src="./img/channels/ren.png" alt="РЕНТВ">
+                        <span class="channel-item__title">
+                            РЕНТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/anekdot.png" alt="Анекдот ТВ">
+                        <span class="channel-item__title">
+                            Анекдот ТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment informational">
+                        <img src="./img/channels/vostok.png" alt="Восток ТВ">
+                        <span class="channel-item__title">
+                            Восток ТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/360.png" alt="360">
+                        <span class="channel-item__title">
+                            360
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment music informational">
+                        <img src="./img/channels/tv8.png" alt="8 каналов">
+                        <span class="channel-item__title">
+                            8 каналов
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/sub.png" alt="Суббота!">
+                        <span class="channel-item__title">
+                            Суббота!
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="kids regional">
+                        <img src="./img/channels/bobr.png" alt="Бобер">
+                        <span class="channel-item__title">
+                            Бобер
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="regional">
+                        <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                        <span class="channel-item__title">
+                            КВН ТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/sarafan.png" alt="Сарафан">
+                        <span class="channel-item__title">
+                            Сарафан
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="music">
+                        <img src="./img/channels/tnt.png" alt="ТНТ">
+                        <span class="channel-item__title">
+                            ТНТ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment music">
+                        <img src="./img/channels/pyatnica.png" alt="Пятница">
+                        <span class="channel-item__title">
+                            Пятница
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/1.png" alt="Первый канал">
+                        <span class="channel-item__title">
+                            Первый канал
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment informational">
+                        <img src="./img/channels/ren.png" alt="РЕНТВ">
+                        <span class="channel-item__title">
+                            РЕНТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment">
+                        <img src="./img/channels/anekdot.png" alt="Анекдот ТВ">
+                        <span class="channel-item__title">
+                            Анекдот ТВ
+                        </span>
+                    </div>
+                    <div class="channel-item" data-category="entertainment informational">
+                        <img src="./img/channels/vostok.png" alt="Восток ТВ">
+                        <span class="channel-item__title">
+                            Восток ТВ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-channels__body_mobile">
+                <div class="modal-channels__categories">
+                    <ul>
+                        <li data-category="entertainment">
+                            <div class="categories__top">
+                                Развлекательные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="educational">
+                            <div class="categories__top">
+                                Познавательные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="moviesAndSeries">
+                            <div class="categories__top">
+                                Кино и сериалы
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="essential">
+                            <div class="categories__top">
+                                Эфирные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="informational">
+                            <div class="categories__top">
+                                Информационные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="music">
+                            <div class="categories__top">
+                                Музыкальные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="kids">
+                            <div class="categories__top">
+                                Детские
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="regional">
+                            <div class="categories__top">
+                                Региональные
+                                <span class="channel-category_count">32</span>
+                            </div>
+
+                        </li>
+                        <li data-category="sport">
+                            <div class="categories__top">
+                                Спортивные
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="radio">
+                            <div class="categories__top">
+                                Радио
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sub.png" alt="Суббота!">
+                                    <span class="channel-item__title">
+                                        Суббота!
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="kids regional">
+                                    <img src="./img/channels/bobr.png" alt="Бобер">
+                                    <span class="channel-item__title">
+                                        Бобер
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="regional">
+                                    <img src="./img/channels/kvn.png" alt="КВН ТВ">
+                                    <span class="channel-item__title">
+                                        КВН ТВ
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/sarafan.png" alt="Сарафан">
+                                    <span class="channel-item__title">
+                                        Сарафан
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-category="telemarketers">
+                            <div class="categories__top">
+                                Телемагазины
+                                <span class="channel-category_count">32</span>
+                            </div>
+                            <div class="channel_mob-grid">
+                                <div class="channel-item" data-category="entertainment">
+                                    <img src="./img/channels/360.png" alt="360">
+                                    <span class="channel-item__title">
+                                        360
+                                    </span>
+                                </div>
+                                <div class="channel-item" data-category="entertainment music informational">
+                                    <img src="./img/channels/tv8.png" alt="8 каналов">
+                                    <span class="channel-item__title">
+                                        8 каналов
+                                    </span>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="modal-channels_hint">
+                        <div class="modal-channels__hint-title">
+                            Также включено
+                        </div>
+                        <div class="modal-channels__hint_info">
+                            <span>Мультискрин</span>
+                            <p>ТВ на смартфоне, планшете и ноутбуке – до 5 устройств</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./scripts/headerAndLocation.js"></script>
+
+    <script src="./scripts/plansSwiper.js"></script>
+
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/form_modal.js"></script>
+    <script src="./scripts/question.js"></script>
+</body>
+
+</html>
