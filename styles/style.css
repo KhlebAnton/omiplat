@@ -839,7 +839,13 @@ a {
     max-width: 620px;
     margin-top: 8px;
 }
-
+.hero-btn-group .btn_hero {
+    background-color: #1643AB;
+}
+.hero-btn-group {
+    display: flex;
+    gap: 6px;
+}
 .hero__info .btn {
     margin-top: 36px;
 }
@@ -1115,29 +1121,37 @@ a {
     left: -56px;
 }
 
-.digital-tv__item-img {
+.pluses__item-img {
     width: 86px;
     height: 86px;
     flex-shrink: 0;
 }
 
-.digital-tv__item-img.icon-camera {
-    background: url('../img/digital-tv/1.svg') 50% / contain no-repeat;
+.pluses__item-img.icon-camera {
+    background: url('../img/pluses/1.svg') 50% / contain no-repeat;
 }
 
-.digital-tv__item-img.icon-docks {
-    background: url('../img/digital-tv/2.svg') 50% / contain no-repeat;
+.pluses__item-img.icon-docks {
+    background: url('../img/pluses/2.svg') 50% / contain no-repeat;
 }
 
-.digital-tv__item-img.icon-tv {
-    background: url('../img/digital-tv/3.svg') 50% / contain no-repeat;
+.pluses__item-img.icon-tv {
+    background: url('../img/pluses/3.svg') 50% / contain no-repeat;
 }
 
-.digital-tv__item-img.icon-acc {
-    background: url('../img/digital-tv/4.svg') 50% / contain no-repeat;
+.pluses__item-img.icon-acc {
+    background: url('../img/pluses/4.svg') 50% / contain no-repeat;
 }
-
-.digital-tv__item {
+.pluses__item-img.icon-mail {
+    background: url('../img/pluses/mail.svg') 50% / contain no-repeat;
+}
+.pluses__item-img.icon-comm {
+    background: url('../img/pluses/commun.svg') 50% / contain no-repeat;
+}
+.pluses__item-img.icon-arrow {
+    background: url('../img/pluses/arrow.svg') 50% / contain no-repeat;
+}
+.pluses__item {
     padding: 20px 26px;
     display: flex;
     align-items: center;
@@ -1145,29 +1159,34 @@ a {
     box-shadow: 3px 4px 12px 0px #788DB830;
     border-radius: 12px;
 }
-
-.digital-tv__items {
+.section_pluses {
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+.pluses__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 36px;
 }
-
-.digital-tv__item-title {
+.pluses__items.grid_three {
+    grid-template-columns: repeat(3, 1fr);
+}
+.pluses__item-title {
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 24px;
     color: #444444;
 }
 
-.digital-tv__info {
+.pluses__info {
     max-width: 1010px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.digital-tv__top {
+.pluses__top {
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -1614,6 +1633,22 @@ a {
 }
 .icon_shield {
     background: url('../img/icons/icon_shield.svg') 50% / contain no-repeat;
+}
+
+.icon_wifi {
+    background: url('../img/icons/icon_wifi.svg') 50% / contain no-repeat;
+}
+.icon_cloud {
+    background: url('../img/icons/icon_cloud.svg') 50% / contain no-repeat;
+}
+.icon_geo {
+    background: url('../img/icons/icon_geo.svg') 50% / contain no-repeat;
+}
+.icon_people {
+    background: url('../img/icons/icon_people.svg') 50% / contain no-repeat;
+}
+.icon_pack{
+    background: url('../img/icons/icon_pack.svg') 50% / contain no-repeat;
 }
 .advantages__items {
     margin-top: 90px;
@@ -2531,6 +2566,10 @@ select::marker {
     background: #F6F7FB;
     padding: 20px;
     border-radius: 12px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    min-height: 164px;
 }
 
 .steps__item-icon {
@@ -3355,6 +3394,63 @@ gap: 6px;
 .vacancies_item__bottom {
     flex-shrink: 0;
 }
+.provision .pluses__item {
+    padding: 20px;
+}
+.provision .pluses__item {
+    padding: 20px;
+}
+.provision .pluses__item p {
+    color: #444444;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.not-page {
+    min-height: 100vh;
+    background: #6294F9;
+   display: flex;
+   justify-content: center;
+    color: #ffffff;
+    padding-bottom: 50px;
+    position: relative;
+    overflow-x: hidden;
+}
+.not-page__content {
+    position: relative;
+    z-index: 1;
+    max-height: 600px;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.main.not-page::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background: url('../img/bg_not_page.png') 50% / cover no-repeat;
+}
+.not-page h4 {
+    margin-top: 10vh;
+}
+.not-page .btn {
+    background: #1643AB;
+    margin-top: 12px;
+}
+.not-page .btn:hover {
+    background: #2C64D6;
+}
 @media (max-width: 1600px) {
     .section_hero::before {
         background: linear-gradient(to right,
@@ -3402,12 +3498,14 @@ gap: 6px;
         gap: 20px;
     }
 
-    .digital-tv__items {
+    .pluses__items {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-
+    .pluses__items.grid_three {
+        grid-template-columns: 1fr 1fr;
+    }
     .cash_info {
         margin-left: 30px;
     }
@@ -3846,7 +3944,10 @@ gap: 6px;
         max-width: none;
 
     }
-
+    .section_pluses {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
     .modal_location::before {
         position: fixed;
         width: 100%;
@@ -3959,7 +4060,7 @@ gap: 6px;
         padding: 10px 20px;
     }
 
-    .digital-tv__top {
+    .pluses__top {
         flex-direction: column;
         gap: 12px;
         align-items: start;
@@ -4309,6 +4410,16 @@ gap: 6px;
     .vacancies_item__price {
         margin-bottom: 20px;
     }
+    .not-page__content {
+        width: 100%;
+        padding: 30px;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    .not-page__content img {
+        width: 100%;
+    }
 }
 
 @media (max-width:768px) {
@@ -4397,29 +4508,35 @@ gap: 6px;
         right: -13px;
     }
 
-    .section_digital-tv .btn-third {
+    .section_pluses .btn-third {
         width: 100%;
         max-width: none;
     }
 
-    .digital-tv__items {
+    .pluses__items {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
         margin-top: 30px;
     }
-
-    .digital-tv__item {
+    .pluses__items.grid_three {
+        grid-template-columns: 1fr;
+    }
+    .provision .pluses__item {
+        flex-direction: column;
+        align-items: start;
+    }
+    .pluses__item {
         padding: 10px;
         gap: 20px;
     }
 
-    .digital-tv__item-img {
+    .pluses__item-img {
         width: 60px;
         height: 60px;
     }
 
-    .digital-tv__item-title {
+    .pluses__item-title {
         font-size: 18px;
     }
 
@@ -4663,6 +4780,20 @@ gap: 6px;
         background: linear-gradient(to bottom, var(--color-primary-light) 10px, #acc7fe00 33px);
         z-index: 1;
         pointer-events: none;
+    }
+    .section_hero .hero-btn-group {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 36px;
+        width: 100%;
+    }
+    .section_hero .hero-btn-group .btn {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    .section_hero:not(.hero_without_img) {
+        padding-top: 12px;
     }
 }
 @media (max-width:560px) {
