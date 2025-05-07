@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
     const headerPhone = document.querySelector('.header_phone');
-    headerPhone.addEventListener('touchstart', () => {
+    headerPhone.addEventListener('click', () => {
         if (window.innerWidth < 989) {
             if (!headerPhone.classList.contains('open')) {
                 headerPhone.classList.add('open');

@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./styles/style.css">
-
+    <script src="https://api-maps.yandex.ru/v3/?apikey=0b32d4c2-0b41-432b-b281-fd74cad9cce5&lang=ru_RU"></script>
 </head>
 
 <body>
@@ -76,13 +76,13 @@
                             </div>
                             <ol class="mobile_nav-dropdown-list">
                                 <li>
-                                    <a class="mobile_nav-item" href="#">О компании</a>
+                                    <a class="mobile_nav-item  active" href="#">О компании</a>
                                 </li>
                                 <li>
                                     <a class="mobile_nav-item" href="#">Вакансии</a>
                                 </li>
                                 <li>
-                                    <a class="mobile_nav-item " href="#">Новости</a>
+                                    <a class="mobile_nav-item" href="#">Новости</a>
                                 </li>
                                 <li>
                                     <a class="mobile_nav-item" href="#">Документы</a>
@@ -167,13 +167,13 @@
                                 </svg>
                                 <ol class="dropdown-menu__list">
                                     <li>
-                                        <a class="header__nav-item" href="#">О компании</a>
+                                        <a class="header__nav-item active" href="#">О компании</a>
                                     </li>
                                     <li>
                                         <a class="header__nav-item" href="#">Вакансии</a>
                                     </li>
                                     <li>
-                                        <a class="header__nav-item " href="#">Новости</a>
+                                        <a class="header__nav-item" href="#">Новости</a>
                                     </li>
                                     <li>
                                         <a class="header__nav-item" href="#">Документы</a>
@@ -266,269 +266,112 @@
             </div>
         </div>
     </header>
-    <main class="main main_no-bg">
-
-        <section class="news">
-            <div class="news_content container">
-                <div class="news_wrapper">
-                    <div class="breadcrumbs">
-                        <a href="#">
-                            Главная /
-                        </a>
-                        <a href="#">
-                            Новости /
-                        </a>
-                        <span>
-                            Главная
-                        </span>
-                    </div>
-                    <div class="news_wrapper__data">
-                        5 декабря 2024
-                    </div>
-                    <div class="news-single">
-                        <h1>
-                            Как развивалась операционная система Android H0
-                        </h1>
-                        <p>
-                            Сейчас операционная система Android используется в смартфонах, планшетах, часах и
-                            фитнес-браслетах, ноутбуках, телевизорах. Она появилась в 2008 году и быстро завоевала
-                            рынок. Удерживать позиции ей помогает постоянное внедрение технологических трендов, в том
-                            числе использование искусственного интеллекта. Рассмотрим, с чего началась эра Android и в
-                            чем особенности системы.
-                        </p>
-                        <h2>
-                            Когда появилась операционная система Android
-                        </h2>
-                        <p>
-                            ОС Android создана независимой компанией Android, Inc. В 2003 году в Калифорнии ее основали
-                            Эндрю Рубин, Рич Майнер, Ник Сирс и Крис Уайт. По задумке система предназначалась для
-                            цифровых фотоаппаратов. Однако этот рынок был нишевым, поэтому не удалось привлечь
-                            инвесторов для проекта. Тогда было решено адаптировать ОС для смартфонов.
-                        </p>
-                        <p>
-                            В 2005 году компания Google приобрела Android, Inc. за 130 млн долларов. Эндрю Рубин получил
-                            акции Google и должность вице-президента мобильного подразделения.
-                        </p>
-                        <p>
-                            Корпорация сделала систему бесплатной для разработчиков, а прибыль планировала получать за
-                            счет сервисных услуг и агентских процентов от продажи приложений. Эта концепция повысила
-                            популярность новой платформы и помогла ей занять лидерские позиции на рынке.
-                        </p>
-                        <img src="./img/news_single-img.png" alt="Новость">
-                        <p>
-                            Первым смартфоном на базе ОС Android стал T-Mobile G1 компании HTC, который представили в
-                            сентябре 2008 года в Нью-Йорке. В США его можно было приобрести с двухгодичным контрактом с
-                            оператором связи T-Mobile, в Европе он продавался без привязки к провайдеру.
-                        </p>
-                        <p>
-                            На момент выпуска для смартфона было доступно 1700 приложений от сторонних разработчиков.
-                            Смартфон превосходил iPhone по разрешению камеры и времени автономной работы, а также
-                            поддерживал карты памяти. При этом дизайн был неоднозначным. В смартфоне не было экранной
-                            клавиатуры, поэтому была добавлена физическая.
-                        </p>
-                        <p>
-                            Логотип для Android разработала штатный дизайнер Google Ирина Блок. По техническому заданию
-                            он должен был стать максимально запоминающимся. Было создано более сотни пробных эскизов,
-                            пока не выбрали финальный вариант. Логотипом стал светло-зеленый робот с антеннами-рожками и
-                            зеленая надпись строчными буквами. В 2019 году название стало черным. В 2023 году название
-                            ОС стали писать с заглавной буквы, а робот стал объемным.
-                        </p>
-                        <h3>
-                            В чем особенности архитектуры операционной системы Android
-                        </h3>
-                        <p>
-                            В основе Android ОС — модифицированное ядро Linux LTS. Важное отличие от iOS Apple —
-                            открытый исходный код. Так разработчики со всего мира могут участвовать в доработке и
-                            улучшении ОС. Производители гаджетов Samsung, Huawei и Sony адаптируют Android для своей
-                            техники и добавляют уникальные функции.
-                        </p>
-                        <p>
-                            Java стал основным языком <a href="#">для разработки Android-приложений с момента
-                                запуска</a> платформы в
-                            2008 году. Собственные библиотеки ОС обеспечивают поддержку C/C++. Официальный язык для
-                            создания Android-приложений с 2017 года — Kotlin.
-                        </p>
-                        <h4>
-                            Как совершенствовались версии ОС
-                        </h4>
-                        <p>
-                            Кроме порядкового номера, версии Android получают названия десертов. <br> Рассмотрим особенности
-                            некоторых обновлений:
-                        </p>
-                        <ul>
-                            <li>
-                                <span>Android 3.0 Honeycomb вышла в 2011 году. Она стала первой версией для планшетов. Появилась поддержка многоядерных процессоров и внешних устройств (клавиатур, мышей)</span>
-                            </li>
-                            <li>
-                                <span>
-                                    В Android 4.0 Ice Cream Sandwich (2012) интерфейс стал единым для планшетов и смартфонов
-                                </span>
-                                
-                            </li>
-                            <li>
-                                <span>
-                                    В Android 6.0 Marshmallow (2015) появилась система электронных платежей Android Pay, которая впоследствии стала Google Pay
-                                </span>
-                               
-                            </li>
-                        </ul>
-                        <ol>
-                            <li>
-                                <span>Android 3.0 Honeycomb вышла в 2011 году. Она стала первой версией для планшетов. Появилась поддержка многоядерных процессоров и внешних устройств (клавиатур, мышей)</span>
-                            </li>
-                            <li>
-                                <span>
-                                    В Android 4.0 Ice Cream Sandwich (2012) интерфейс стал единым для планшетов и смартфонов
-                                </span>
-                                
-                            </li>
-                            <li>
-                                <span>
-                                    В Android 6.0 Marshmallow (2015) появилась система электронных платежей Android Pay, которая впоследствии стала Google Pay
-                                </span>
-                               
-                            </li>
-                        </ol>
-                        <h5>
-                            В чем особенности архитектуры операционной системы Android
-                        </h5>
-                        <p>
-                            В основе Android ОС — модифицированное ядро Linux LTS. Важное отличие от iOS Apple — открытый исходный код. Так разработчики со всего мира могут участвовать в доработке и улучшении ОС. Производители гаджетов Samsung, Huawei и Sony адаптируют Android для своей техники и добавляют уникальные функции.
-                        </p>
-                    </div>
+    <main class="main">
+        <section class="section_hero hero_without_img">
+            <div class="hero-content container">
+                <div class="breadcrumbs">
+                    <a href="#">
+                        Главная /
+                    </a>
+                    <a href="#">
+                        Новости /
+                    </a>
+                    <span>
+                        Главная
+                    </span>
                 </div>
+                <div class="hero__info">
+                    <h1 class="hero__title">О компании</h1>
+                </div>
+            </div>
 
-                <aside class="form_aside">
-                    <h4>
-                        Остались вопросы? Свяжитесь с нами
-                    </h4>
-
-                    <ol class="header_phone-dropdown__list">
+        </section>
+        <section class="section_about">
+            <div class="about_content container">
+                <div class="about__info">
+                    <p>
+                        Омиплат — активно развивающийся интернет-провайдер, предоставляющий широкий спектр телекоммуникационных услуг для частных и корпоративных клиентов. Наши основные направления:
+                    </p>
+                    <ul>
                         <li>
-                            <span class="link_item-title">Доп. телефон</span>
-                            <a href="tel:+79612187876">+7 (861) 218-78-76</a>
+                           <span> Широкополосный доступ в интернет</span>
                         </li>
                         <li>
-                            <span class="link_item-title">Электронная почта</span>
-                            <a href="mailto:support@omiplat.ru">support@omiplat.ru</a>
+                           <span> Интерактивное цифровое телевидение</span>
                         </li>
-                        <li>
-                            <span class="link_item-title">Время работы</span>
-                            <span>с 7:00 до 01:00</span>
-                        </li>
-                    </ol>
-                    <div class="form_aside__bottom">
-                        <div class="btn btn-call" onclick="showFormModal('Заказать звонок')">Заказать звонок</div>
-                        <div class="social-links">
-                            <a class="social-links__item vk" href="#"></a>
-                            <a class="social-links__item odn" href="#"></a>
-                            <a class="social-links__item tg" href="#"></a>
-                        </div>
-                    </div>
-
-                </aside>
+                    </ul>
+                    <p>Мы постоянно совершенствуемся, чтобы вы получали бесперебойный и высокоскоростной доступ к интернету и современному интерактивному телевидению.</p>
+                </div>
+                <div class="about_img">
+                    <img src="./img/about_img.png" alt="Логотип">
+                </div>
+               
             </div>
         </section>
-        <section class="section_other-news">
-            <div class="other-news_content container">
-                <h2>
-                    Другие новости
-                </h2>
-                <div class="other-news_container">
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/1.png" alt="Как развивалась операционная система Android">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+        <section class="section_advantages ">
+            <div class="container">
+                <h2>Наши Услуги</h2>
+                <div class="advantages__items">
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_rocket"></div>
+                        <div class="advantages__item-title">
+                            Безлимитный доступ в интернет
                         </div>
-                    </a>
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/2.png" alt="Как развивалась операционная система Android">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+                        <div class="advantages__item-text">
+                            Наслаждайтесь стабильным и быстрым интернет-соединением без ограничений по трафику
                         </div>
-                    </a>
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/3.png" alt="">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_tv"></div>
+                        <div class="advantages__item-title">
+                            Интерактивное цифровое телевидение
                         </div>
-                    </a>
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/4.png" alt="">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+                        <div class="advantages__item-text">
+                            До 390 каналов и доступ к обширной библиотеке фильмов и сериалов
                         </div>
-                    </a>
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/5.png" alt="">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+                    </div>
+                    <div class="advantages__item">
+                        <div class="advantages__item-img icon_shield"></div>
+                        <div class="advantages__item-title">
+                            Решения для бизнеса
                         </div>
-                    </a>
-                    <a href="#" class="news_item__wrapper">
-                        <div class="news_item">
-                            <div class="news_item__img">
-                                <img src="./img/news/6.png" alt="">
-                            </div>
-                            <div class="news_item__info">
-                                <div class="news_item__data">
-                                    5 декабря 2024
-                                </div>
-                                <h5 class="news_item__title">
-                                    Как развивалась операционная система Android
-                                </h5>
-                            </div>
+                        <div class="advantages__item-text">
+                            Надежные решения для корпоративных клиентов – от офисов до удаленных объектов
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <a href="#" class="btn btn-primary">Перейти ко всем новостям</a>
             </div>
-
+        </section>
+        <section class="section_map">
+            <div class="map_content container">
+                <div class="map_info">
+                    <h2>География покрытия</h2>
+                    <p>Проверьте доступность наших услуг по вашему адресу и наслаждайтесь высоким качеством связи.
+                        Независимо от того, находитесь ли вы в центре или на окраине, мы обеспечим вас стабильным
+                        подключением.</p>
+                    <div class="btn btn-primary" onclick="showFormModal('Заказать звонок')">
+                        Узнать о возможности подключения
+                    </div>
+                </div>
+                <div id="map" class="map"></div>
+            </div>
+        </section>
+        <section class="section_app">
+            <div class="app_content container">
+                <div class="app_info">
+                    <h2>Управляйте услугами легко и удобно через приложение</h2>
+                    <p>Смена тарифа, пополнение счета, подключение и отключение услуги, отслеживание бонусов – всего в
+                        несколько кликов.</p>
+                    <div class="app__qr-items">
+                        <div class="app__qr qr_ios"></div>
+                        <div class="app__qr qr_andr"></div>
+                    </div>
+                    <div class="links_app">
+                        <a href="#" class="link_app link-ios"></a>
+                        <a href="#" class="link_app link-andr"></a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -629,7 +472,7 @@
 
     <script src="./scripts/headerAndLocation.js"></script>
     <script src="./scripts/form_modal.js"></script>
-
+    <script src="./scripts/map.js"></script>
 </body>
 
 </html>
