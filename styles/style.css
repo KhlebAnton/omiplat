@@ -3996,7 +3996,7 @@ gap: 6px;
 
     .section_banner .btn-third {
         position: absolute;
-        bottom: 57.5px;
+        bottom: -40px;
         left: 20px;
     }
 
@@ -4445,7 +4445,7 @@ gap: 6px;
 
 
     .section_banner .btn-third {
-
+        width: auto;
         max-width: none;
         right: 10px;
         left: 10px;
