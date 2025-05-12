@@ -1,53 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Функция для раскрытия/закрытия вопросов
-    const items = document.querySelectorAll('.question__item:not(.hidden-question)');
+    // Находим все вопросы (и видимые, и скрытые)
+    const allQuestions = document.querySelectorAll('.question__item');
     
-    items.forEach(item => {
+    // Добавляем обработчики клика для всех вопросов
+    allQuestions.forEach(item => {
         const top = item.querySelector('.question__item-top');
         
         top.addEventListener('click', function() {
-            items.forEach(otherItem => {
+            // Закрываем все другие открытые вопросы
+            allQuestions.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('open')) {
                     otherItem.classList.remove('open');
                 }
             });
+            
+            // Переключаем текущий вопрос
             item.classList.toggle('open');
         });
     });
 
-    // Функция для кнопки "Показать еще"
+    // Функция для кнопки "Показать еще/Скрыть всё"
     const loadMoreBtn = document.querySelector('.load-more-btn');
     const hiddenQuestions = document.querySelectorAll('.hidden-question');
-    let questionsToShow = 4; // Сколько вопросов показывать за раз
+    let allShown = false;
     
     if (hiddenQuestions.length === 0) {
         loadMoreBtn.style.display = 'none';
     }
     
     loadMoreBtn.addEventListener('click', function() {
-        let shown = 0;
-        
-        for (let i = 0; i < hiddenQuestions.length && shown < questionsToShow; i++) {
-            if (hiddenQuestions[i].classList.contains('hidden-question')) {
-                hiddenQuestions[i].classList.remove('hidden-question');
-                shown++;
-                
-                const top = hiddenQuestions[i].querySelector('.question__item-top');
-                top.addEventListener('click', function() {
-                    document.querySelectorAll('.question__item:not(.hidden-question)').forEach(otherItem => {
-                        if (otherItem !== hiddenQuestions[i] && otherItem.classList.contains('open')) {
-                            otherItem.classList.remove('open');
-                        }
-                    });
-                    
-                    hiddenQuestions[i].classList.toggle('open');
-                });
-            }
+        if (!allShown) {
+            // Показываем все скрытые вопросы
+            hiddenQuestions.forEach(question => {
+                question.classList.remove('hidden-question');
+            });
+            
+            loadMoreBtn.textContent = 'Скрыть все';
+            allShown = true;
+        } else {
+            // Скрываем все вопросы, кроме первых 4
+            document.querySelectorAll('.question__item').forEach((question, index) => {
+                if (index >= 4) {
+                    question.classList.add('hidden-question');
+                }
+            });
+            
+            loadMoreBtn.textContent = 'Показать еще';
+            allShown = false;
         }
         
-        const remainingHidden = document.querySelectorAll('.hidden-question').length;
-        if (remainingHidden === 0) {
+        // Скрываем кнопку, если больше нет скрытых вопросов
+        if (!allShown && document.querySelectorAll('.hidden-question').length === 0) {
             loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'block';
         }
     });
 });
