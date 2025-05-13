@@ -7,7 +7,7 @@ modalFormVacancy.addEventListener('click', (e)=> {
         hideFormModalVacancy()
     }
 })
-const formModalVacancy = document.getElementById('formModal');
+const formModalVacancy = document.getElementById('formModalVac');
 function showFormModalVacancy(id) {
     modalFormVacancy.classList.add('open');
     formModalVacancy.querySelector(`option[value="${id}"]`).setAttribute('selected', true);
@@ -29,11 +29,11 @@ function hideFormModalVacancy() {
 modalFormVacancy.querySelector('.modal-close').addEventListener('click', ()=> {
     hideFormModalVacancy()
 })
-const phoneErrorModal = formModal.querySelector('.phone_error')
-const phoneInputModal = formModal.querySelector('input[name="phone"]');
+const phoneErrorModalVac = formModalVacancy.querySelector('.phone_error')
+const phoneInputModalVac = formModalVacancy.querySelector('input[name="phone"]');
 
 
-phoneInputModal.addEventListener('input', function (e) {
+phoneInputModalVac.addEventListener('input', function (e) {
     let value = e.target.value.replace(/\D/g, '');
     let formattedValue = '';
 
@@ -54,32 +54,32 @@ phoneInputModal.addEventListener('input', function (e) {
 
         // Проверка на полноту номера
         if (value.length === 11) {
-            phoneInputModal.classList.remove('error-outline');
-            phoneErrorModal.style.display = 'none';
+            phoneInputModalVac.classList.remove('error-outline');
+            phoneErrorModalVac.style.display = 'none';
         } 
     }
 
     e.target.value = formattedValue;
 });
 
-phoneInputModal.addEventListener('keydown', function (e) {
+phoneInputModalVac.addEventListener('keydown', function (e) {
     if (e.target.value.replace(/\D/g, '').length >= 11 && e.key !== 'Backspace') {
         e.preventDefault();
     }
 });
 
 
-formModal.addEventListener('submit', function (event) {
+formModalVacancy.addEventListener('submit', function (event) {
     event.preventDefault();
-    const phoneValue = phoneInputModal.value.replace(/\D/g, '');
+    const phoneValue = phoneInputModalVac.value.replace(/\D/g, '');
     if (phoneValue.length === 11) {
         alert('Форма отправлена! (имитация)');
-        phoneInputModal.classList.remove('error-outline');
-        phoneErrorModal.style.display = 'none';
+        phoneInputModalVac.classList.remove('error-outline');
+        phoneErrorModalVac.style.display = 'none';
         hideFormModalVacancy()
     } else {
-        phoneInputModal.classList.add('error-outline');
-        phoneErrorModal.style.display = 'inline';
+        phoneInputModalVac.classList.add('error-outline');
+        phoneErrorModalVac.style.display = 'inline';
     }
 });
 
