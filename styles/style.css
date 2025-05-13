@@ -2026,6 +2026,7 @@ select option {
     opacity: 0;
     z-index: -1;
     cursor: pointer;
+    display: none;
 }
 
 .custom-select__trigger {
