@@ -313,7 +313,9 @@
                 <h2>Наши Услуги</h2>
                 <div class="advantages__items">
                     <div class="advantages__item">
-                        <div class="advantages__item-img icon_rocket"></div>
+                        <div class="advantages__item-img ">
+                            <img src="./img/icons/icon_rocket.svg" alt="">
+                        </div>
                         <div class="advantages__item-title">
                             Безлимитный доступ в интернет
                         </div>
@@ -322,7 +324,9 @@
                         </div>
                     </div>
                     <div class="advantages__item">
-                        <div class="advantages__item-img icon_tv"></div>
+                        <div class="advantages__item-img ">
+                            <img src="./img/icons/icon_tv.svg" alt="">
+                        </div>
                         <div class="advantages__item-title">
                             Интерактивное цифровое телевидение
                         </div>
@@ -331,7 +335,9 @@
                         </div>
                     </div>
                     <div class="advantages__item">
-                        <div class="advantages__item-img icon_shield"></div>
+                        <div class="advantages__item-img ">
+                            <img src="./img/icons/icon_shield.svg" alt="">
+                        </div>
                         <div class="advantages__item-title">
                             Решения для бизнеса
                         </div>
@@ -363,12 +369,20 @@
                     <p>Смена тарифа, пополнение счета, подключение и отключение услуги, отслеживание бонусов – всего в
                         несколько кликов.</p>
                     <div class="app__qr-items">
-                        <div class="app__qr qr_ios"></div>
-                        <div class="app__qr qr_andr"></div>
+                        <div class="app__qr ">
+                            <img src="./img/qr_code-Ios.png" alt="qr-ios">
+                        </div>
+                        <div class="app__qr ">
+                            <img src="./img/qr_code-andr.png" alt="qr-android">
+                        </div>
                     </div>
                     <div class="links_app">
-                        <a href="#" class="link_app link-ios"></a>
-                        <a href="#" class="link_app link-andr"></a>
+                        <a href="#" class="link_app">
+                            <img src="./img/appstore.png" alt="App store">
+                        </a>
+                        <a href="#" class="link_app ">
+                            <img src="./img/googleplay.png" alt="google play">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -385,8 +399,12 @@
                     физических и юридических лиц и интерактивное телевидение.
                 </p>
                 <div class="links_app">
-                    <a href="#" class="link_app link-ios"></a>
-                    <a href="#" class="link_app link-andr"></a>
+                   <a href="#" class="link_app">
+                            <img src="./img/appstore.png" alt="App store">
+                        </a>
+                        <a href="#" class="link_app ">
+                            <img src="./img/googleplay.png" alt="google play">
+                        </a>
                 </div>
             </div>
             <div class="footer_links">
@@ -436,30 +454,50 @@
                         <input type="text" id="phone" name="phone" placeholder="Телефон" required>
                         <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
                     </label>
-                    <label class="form-label">
-                        <span>Населенный пункт</span>
-                        <select name="city" required>
-                            <option value="" disabled selected hidden class="placeholder-option">Населенный пункт:
-                            </option>
-                            <option value="ru">Город 1</option>
-                            <option value="us">Город 2</option>
-                            <option value="de">Город 3</option>
-                        </select>
-                    </label>
-                    <label class="form-label">
-                        <span>Интересующая услуга</span>
-                        <select name="option" required>
-                            <option value="" disabled selected hidden class="placeholder-option">Интересующая услуга:
-                            </option>
-                            <option value="u1">Услуга 1</option>
-                            <option value="u2">Услуга 2</option>
-                            <option value="u3">Услуга 3</option>
-                        </select>
-                    </label>
+                    <label class="form-label custom-select-wrapper">
+                            <span class="label-text">Населенный пункт</span>
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span class="placeholder">Выберите населенный пункт</span>
+                                    <img src="img/icons_select.svg" alt="" class="arrow">
+                                </div>
+                                <div class="custom-options">
+                                    <div class="custom-option" data-value="ru">Город 1</div>
+                                    <div class="custom-option" data-value="us">Город 2</div>
+                                    <div class="custom-option" data-value="de">Город 3</div>
+                                </div>
+                                <select name="city" required class="original-select">
+                                    <option value="" disabled selected hidden>Выберите населенный пункт</option>
+                                    <option value="ru">Город 1</option>
+                                    <option value="us">Город 2</option>
+                                    <option value="de">Город 3</option>
+                                </select>
+                            </div>
+                        </label>
+                        <label class="form-label custom-select-wrapper">
+                            <span class="label-text">Интересующая услуга</span>
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span class="placeholder">Интересующая услуга:</span>
+                                    <img src="img/icons_select.svg" alt="" class="arrow">
+                                </div>
+                                <div class="custom-options">
+                                    <div class="custom-option" data-value="u1">Услуга 1</div>
+                                    <div class="custom-option" data-value="u2">Услуга 2</div>
+                                    <div class="custom-option" data-value="u3">Услуга 3</div>
+                                </div>
+                                <select name="service" required class="original-select">
+                                    <option value="" disabled selected hidden>Интересующая услуга:</option>
+                                    <option value="u1">Услуга 1</option>
+                                    <option value="u2">Услуга 2</option>
+                                    <option value="u3">Услуга 3</option>
+                                </select>
+                            </div>
+                        </label>
                 </div>
                 <button type="submit" class="btn btn-modal-form btn-form">Заказать звонок</button>
                 <div class="form-policy">
-                    Нажимая кнопку «Заказать звонок», я даю свое согласие
+                    Нажимая кнопку «Заказать звонок», я даю свое согласие <br>
                     на <a href="#">обработку персональных данных</a>
                 </div>
             </form>

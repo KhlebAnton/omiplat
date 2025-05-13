@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-   
+
 
     // Modal functions
     function showModalLocatAsk() {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.add('no-scroll');
             document.documentElement.classList.add('no-scroll');
         }
-        
+
         modalLocationAsk.classList.remove('hidden');
     }
 
@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showModalLocatSelect(el) {
-       
+
         // Find the modal that's a sibling of the clicked location name
         const modalLocationSelect = el.closest('.location').querySelector('.modal_location-select');
-        
+
         // Before showing, select the active location from cookies
         const savedLocation = getCookie(COOKIE_NAME);
         if (savedLocation) {
@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLocation = el.textContent.trim();
             selectLocationOption(currentLocation, modalLocationSelect);
         }
-        
+
         // Hide all other select modals first
         hideModalLocatSelect();
-        
+
         // Show this specific modal
         modalLocationSelect.classList.remove('hidden');
-        
+
         // Setup event listeners for this specific modal
         setupModalSelectListeners(modalLocationSelect);
     }
@@ -169,38 +169,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerMenuBtn = document.querySelector('.header__menu-nav');
 
     headerMenuBtn.addEventListener('click', () => {
-        headerMenuBtn.classList.add('open');
-        setTimeout(() => {
-            headerMenuBtn.classList.remove('open');
-        }, 2000)
+        headerMenuBtn.classList.toggle('open');
+
     })
 
     const dropdownItems = document.querySelectorAll('.dropdown-item');
 
     dropdownItems.forEach(el => {
         el.addEventListener('click', () => {
-            el.classList.add('open');
-            setTimeout(() => {
-                el.classList.remove('open');
-            }, 2000)
+            if (window.innerWidth < 1024) {
+                el.classList.toggle('open');
+            }
+
         })
     });
 
     const headerPhoneContent = document.querySelector('.header_phone-content');
     const headerPhoneLink = headerPhoneContent.querySelector('.header_phone-link');
-    // headerPhoneLink.addEventListener('click', (e) => {
-    //     // Проверяем, является ли устройство мобильным (ширина экрана меньше 992px)
-    //     if (window.innerWidth < 1400) {
-    //         if (!headerPhoneContent.classList.contains('open')) {
-    //             e.preventDefault();
-    //             headerPhoneContent.classList.add('open');
-    //             setTimeout(() => {
-    //                 headerPhoneContent.classList.remove('open');
-    //             }, 2000);
-    //         }
-    //     }
-    //     // На ПК ничего не делаем - ссылка сработает как обычно
-    // });
+    const headerPhoneDropdown = headerPhoneContent.querySelector('.header_phone-dropdown')
+    headerPhoneLink.addEventListener('click', (e) => {
+        if (window.innerWidth < 1024) {
+            headerPhoneContent.classList.toggle('open')
+        }
+
+    });
+    headerPhoneDropdown.addEventListener('click', (e) => {
+        headerPhoneContent.classList.remove('open')
+    });
 
     const headerPhone = document.querySelector('.header_phone');
     headerPhone.addEventListener('click', () => {
@@ -216,9 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.documentElement.classList.remove('no-scroll');
             }
         }
-        
-    });
 
+    });
+    const btnMenuContent = document.querySelector('.menu_mobile')
+    btnMenuContent.querySelector('.btn-call').addEventListener('click', ()=> {
+         btnMenu.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
+    })
     const btnMenu = document.querySelector('.btn-menu');
     btnMenu.addEventListener('click', () => {
         if (!btnMenu.classList.contains('open')) {
@@ -235,8 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mobileDropdown = document.querySelectorAll('.mobile_nav-dropdown');
 
-    mobileDropdown.forEach(el=> {
-        el.addEventListener('click', ()=> {
+    mobileDropdown.forEach(el => {
+        el.addEventListener('click', () => {
             el.classList.toggle('open')
         })
     })
