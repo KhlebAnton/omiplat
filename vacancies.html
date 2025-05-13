@@ -544,78 +544,13 @@
         </div>
     </div>
 
-<div class="modal modal-form_call">
-        <div class="modal-form__content">
-            <div class="modal-close"></div>
-            <div class="modal__title">
-                Заказать звонок
-            </div>
-            <form id="formModal" class="form">
-                <div class="form-wrapper">
-                    <label class="form-label">
-                        <span>Имя</span>
-                        <input type="text" name="name" placeholder="Имя" required>
-                    </label>
-                    <label class="form-label">
-                        <span>Телефон</span>
-                        <input type="text" id="phone" name="phone" placeholder="Телефон" required>
-                        <span class="phone_error" id="phoneErr">Укажите верный номер телефона</span>
-                    </label>
-                    <label class="form-label custom-select-wrapper">
-                            <span class="label-text">Населенный пункт</span>
-                            <div class="custom-select">
-                                <div class="custom-select__trigger">
-                                    <span class="placeholder">Выберите населенный пункт</span>
-                                    <img src="img/icons_select.svg" alt="" class="arrow">
-                                </div>
-                                <div class="custom-options">
-                                    <div class="custom-option" data-value="ru">Город 1</div>
-                                    <div class="custom-option" data-value="us">Город 2</div>
-                                    <div class="custom-option" data-value="de">Город 3</div>
-                                </div>
-                                <select name="city" required class="original-select">
-                                    <option value="" disabled selected hidden>Выберите населенный пункт</option>
-                                    <option value="ru">Город 1</option>
-                                    <option value="us">Город 2</option>
-                                    <option value="de">Город 3</option>
-                                </select>
-                            </div>
-                        </label>
-                        <label class="form-label custom-select-wrapper">
-                            <span class="label-text">Интересующая услуга</span>
-                            <div class="custom-select">
-                                <div class="custom-select__trigger">
-                                    <span class="placeholder">Интересующая услуга:</span>
-                                    <img src="img/icons_select.svg" alt="" class="arrow">
-                                </div>
-                                <div class="custom-options">
-                                    <div class="custom-option" data-value="u1">Услуга 1</div>
-                                    <div class="custom-option" data-value="u2">Услуга 2</div>
-                                    <div class="custom-option" data-value="u3">Услуга 3</div>
-                                </div>
-                                <select name="service" required class="original-select">
-                                    <option value="" disabled selected hidden>Интересующая услуга:</option>
-                                    <option value="u1">Услуга 1</option>
-                                    <option value="u2">Услуга 2</option>
-                                    <option value="u3">Услуга 3</option>
-                                </select>
-                            </div>
-                        </label>
-                </div>
-                <button type="submit" class="btn btn-modal-form btn-form">Заказать звонок</button>
-                <div class="form-policy">
-                    Нажимая кнопку «Заказать звонок», я даю свое согласие <br>
-                    на <a href="#">обработку персональных данных</a>
-                </div>
-            </form>
-        </div>
-    </div>
+
 
 
 
     <script src="./scripts/headerAndLocation.js"></script>
     <script src="./scripts/form_vacancy.js"></script>
-    <script src="./scripts/form_modal.js"></script>
+    
 </body>
 
 </html>
