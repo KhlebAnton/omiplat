@@ -131,3 +131,53 @@ form.querySelectorAll('.custom-select').forEach(select => {
         }
     }
 });
+
+const submitBtn = form.querySelector('.btn-form');
+const requiredInputs = form.querySelectorAll('input[required], select[required]');
+
+checkForm();
+
+// Добавляем обработчики событий для всех обязательных полей
+requiredInputs.forEach(input => {
+    // Для обычных input-полей
+    if (input.tagName === 'INPUT') {
+        input.addEventListener('input', checkForm);
+    }
+    // Для select-полей
+    if (input.tagName === 'SELECT') {
+        input.addEventListener('change', checkForm);
+    }
+});
+
+// Функция проверки заполненности формы
+function checkForm() {
+    let isFormValid = true;
+
+    requiredInputs.forEach(input => {
+        // Для кастомного select проверяем выбранное значение
+        if (input.classList.contains('original-select')) {
+            if (!input.value) {
+                isFormValid = false;
+            }
+        }
+        // Для обычных input-полей
+        else if (!input.value.trim()) {
+            isFormValid = false;
+        }
+    });
+
+    // Управляем состоянием кнопки
+    if (isFormValid) {
+        submitBtn.classList.remove('disabled');
+        submitBtn.disabled = false;
+    } else {
+        submitBtn.classList.add('disabled');
+        submitBtn.disabled = true;
+    }
+}
+
+// Также нужно обработать клики по кастомным select-опциям
+const customOptions = form.querySelectorAll('.custom-option');
+customOptions.forEach(option => {
+    option.addEventListener('click', checkForm);
+});
