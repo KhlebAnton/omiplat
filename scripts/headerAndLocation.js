@@ -187,11 +187,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerPhoneContent = document.querySelector('.header_phone-content');
     const headerPhoneLink = headerPhoneContent.querySelector('.header_phone-link');
     const headerPhoneDropdown = headerPhoneContent.querySelector('.header_phone-dropdown')
-    headerPhoneLink.addEventListener('click', (e) => {
-        if (window.innerWidth < 1024) {
-            headerPhoneContent.classList.toggle('open')
-        }
+    let closeTimer;
 
+    headerPhoneLink.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        headerPhoneContent.classList.toggle('open');
+
+        clearTimeout(closeTimer); 
+
+        if (headerPhoneContent.classList.contains('open')) {
+            closeTimer = setTimeout(() => {
+                headerPhoneContent.classList.remove('open');
+            }, 5000);
+        }
+    });
+
+
+    document.addEventListener('click', (e) => {
+        if (!headerPhoneContent.contains(e.target) && e.target !== headerPhoneLink) {
+            headerPhoneContent.classList.remove('open');
+            clearTimeout(closeTimer); 
+        }
     });
     headerPhoneDropdown.addEventListener('click', (e) => {
         headerPhoneContent.classList.remove('open')
@@ -214,10 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
     const btnMenuContent = document.querySelector('.menu_mobile')
-    btnMenuContent.querySelector('.btn-call').addEventListener('click', ()=> {
-         btnMenu.classList.remove('open');
-            document.body.classList.remove('no-scroll');
-            document.documentElement.classList.remove('no-scroll');
+    btnMenuContent.querySelector('.btn-call').addEventListener('click', () => {
+        btnMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+        document.documentElement.classList.remove('no-scroll');
     })
     const btnMenu = document.querySelector('.btn-menu');
     btnMenu.addEventListener('click', () => {

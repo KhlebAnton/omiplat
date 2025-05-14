@@ -269,10 +269,10 @@ a {
     display: block;
     background: url('../img/phone_arrow-down.svg') 50% / contain no-repeat;
     transition: .2s;
+    cursor: pointer;
 }
 
-.header_phone-content.open .header_phone-link::after,
-.header_phone-content:hover .header_phone-link::after {
+.header_phone-content.open .header_phone-link::after {
     transform: rotate(180deg);
 }
 
@@ -299,9 +299,8 @@ a {
     gap: 16px;
 
 }
-
-.header_phone-content.open .header_phone-dropdown,
-.header_phone-content:hover .header_phone-dropdown {
+.header_phone-dropdown:hover,
+.header_phone-content.open .header_phone-dropdown{
     opacity: 1;
     pointer-events: all;
 }
@@ -4252,7 +4251,7 @@ select option {
     }
 
     .banner__cash .banner__img__buble:first-child {
-        left: 74px;
+        left: 13px;
         top: -18px;
     }
 
@@ -5128,6 +5127,10 @@ select option {
     .footer__develops img {
         width: 175px;
     }
+    .banner__img {
+   
+    min-width: auto;
+}
 }
 @media (max-width:495px) {
     .section_hero .hero-btn-group {
