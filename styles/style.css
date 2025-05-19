@@ -299,8 +299,9 @@ a {
     gap: 16px;
 
 }
+
 .header_phone-dropdown:hover,
-.header_phone-content.open .header_phone-dropdown{
+.header_phone-content.open .header_phone-dropdown {
     opacity: 1;
     pointer-events: all;
 }
@@ -318,11 +319,13 @@ a {
     width: fit-content;
     cursor: pointer;
 }
+
 .btn.disabled {
-    
+
     opacity: 0.6;
     cursor: not-allowed;
 }
+
 .btn-call {
     color: var(--color-white);
     background-color: var(--color-primary-light);
@@ -925,9 +928,11 @@ a {
     vertical-align: bottom;
 
 }
+
 .hero_small-img .swiper-container_img {
     width: 52%;
 }
+
 .swiper-button-prev_plans,
 .swiper-button-next_plans,
 .swiper-button-prev_hero,
@@ -1065,7 +1070,7 @@ a {
     line-height: 110%;
     font-weight: 600;
     letter-spacing: -0.5px;
-    
+
     position: absolute;
 }
 
@@ -1568,6 +1573,7 @@ a {
     left: 20px;
     top: -56px;
 }
+
 .advantages__item-img img {
     width: 100%;
     height: 100%;
@@ -1898,10 +1904,11 @@ a {
     height: 100%;
     object-fit: contain;
 }
-.section_app .link_app {
-        box-shadow: 4px 4px 17.7px 0px #6294F936;
 
-    }
+.section_app .link_app {
+    box-shadow: 4px 4px 17.7px 0px #6294F936;
+
+}
 
 
 .section_form {
@@ -2449,7 +2456,7 @@ select option {
 
 .modal-channels__categories li.active {
 
-  background: #6294F914;
+    background: #6294F914;
 
 
 }
@@ -2621,10 +2628,14 @@ select option {
     background: #F6F7FB;
     padding: 20px;
     border-radius: 12px;
-    justify-content: space-between;
+    justify-content: start;
     display: flex;
     flex-direction: column;
     min-height: 164px;
+}
+
+.steps__items_busines .steps__item {
+    justify-content: space-between;
 }
 
 .steps__item-icon {
@@ -2632,6 +2643,7 @@ select option {
     height: 40px;
     margin-bottom: 20px;
 }
+
 .steps__item-icon img {
     width: 100%;
     height: 100%;
@@ -2782,6 +2794,8 @@ select option {
 
 .services__item-price {
     font-size: 24px;
+    max-width: 140px;
+    width: 100%;
     font-weight: 600;
     font-family: 'Montserrat';
 }
@@ -3147,24 +3161,24 @@ select option {
 
 .news-single ol {
     list-style-type: none;
-    counter-reset: item; 
-    padding-left: 0; 
+    counter-reset: item;
+    padding-left: 0;
 }
 
 .news-single ol li {
-    counter-increment: item; 
+    counter-increment: item;
     position: relative;
-    padding-left: 17px; 
+    padding-left: 17px;
 }
 
 .news-single ol li::before {
-    content: counter(item); 
+    content: counter(item);
     position: absolute;
     left: 0;
     font-weight: 600;
     font-family: 'Montserrat';
-    color: #6294F9; 
-  
+    color: #6294F9;
+
 }
 
 .about__info ul li,
@@ -3178,7 +3192,7 @@ select option {
     width: 12px;
     height: 12px;
     content: '';
-    top: 6px;
+    top: 5px;
     left: -17px;
     background: url('../img/point.svg') 50% / contain no-repeat;
 }
@@ -3188,7 +3202,9 @@ select option {
 .news-single ul li span,
 .news-single ol li span {
     color: #000000;
+    line-height: 110%;
 }
+
 .section_other-news {
     margin: 100px 0;
 }
@@ -3703,7 +3719,8 @@ select option {
     .app__qr-items {
         justify-content: end;
     }
-   .app_tv .links_app,
+
+    .app_tv .links_app,
     .app_tv .app__qr-items {
         justify-content: start;
     }
@@ -3722,9 +3739,11 @@ select option {
         width: 100%;
         min-width: auto;
     }
+
     .hero_small-img .swiper-container_img {
         width: 100%;
     }
+
     .section_hero:not(.hero_without_img) {
         display: flex;
         flex-direction: column;
@@ -3751,10 +3770,12 @@ select option {
     .swiper-container_img {
         position: relative;
     }
-.tariff_item-title {
-    width: auto;
-    text-align: center;
-}
+
+    .tariff_item-title {
+        width: auto;
+        text-align: center;
+    }
+
     .swiper-container_img::after {
         position: absolute;
         content: '';
@@ -4331,6 +4352,10 @@ select option {
         font-size: 40px;
     }
 
+    .docs {
+        margin-bottom: 30px;
+    }
+
     .cash_info h2 {
         max-width: 241px;
     }
@@ -4406,6 +4431,15 @@ select option {
         align-items: start;
         gap: 10px;
         padding-bottom: 131px;
+    }
+
+    .steps__items_busines .steps_top {
+        padding-bottom: 60px;
+    }
+
+    .steps__items_busines .steps__items {
+
+        margin-top: -40px;
     }
 
     .steps__items {
@@ -4495,6 +4529,8 @@ select option {
     .bonus_item {
         padding: 10px;
         border-radius: 24px;
+        position: relative;
+        padding-bottom: 66px;
     }
 
     .bonus_item-precent {
@@ -4517,8 +4553,12 @@ select option {
     }
 
     .bonus_item__bottom .btn {
-        width: 100%;
+        width: auto;
         max-width: none;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
     }
 
     .bonus_item-table__head-item {
@@ -4530,7 +4570,8 @@ select option {
     }
 
     .steps__item {
-        min-height: 136px;
+        min-height: auto;
+
     }
 
     .section_steps .btn-secondary {
@@ -5040,7 +5081,7 @@ select option {
         pointer-events: none;
     }
 
-    .section_hero .hero-btn-group .btn{
+    .section_hero .hero-btn-group .btn {
         width: fit-content;
     }
 
@@ -5057,13 +5098,18 @@ select option {
 
     }
 
+    .app_tv .links_app,
+    .app_tv .app__qr-items {
+        justify-content: center;
+    }
+
     .link_app {
         width: 140px;
         height: 41px;
         border-radius: 8px;
     }
 
-    
+
 }
 
 @media (max-width:560px) {
@@ -5106,6 +5152,7 @@ select option {
     .location-name.location-with-icon {
         margin-top: 6px;
     }
+
     .app_content::after {
         top: auto;
         bottom: -322px;
@@ -5117,21 +5164,32 @@ select option {
         background: url(../img/Subtract.png) 50% / contain no-repeat;
         z-index: -1;
     }
-.app_info {
+
+    .app_info {
         margin-top: 0;
         margin-left: 0;
         margin-bottom: 305px;
         width: 100%;
         max-width: none;
     }
+
     .footer__develops img {
         width: 175px;
     }
+
     .banner__img {
-   
-    min-width: auto;
+
+        min-width: auto;
+    }
+
+    .about__info ul li::before,
+    .news-single ul li::before {
+
+        top: 4px;
+
+    }
 }
-}
+
 @media (max-width:495px) {
     .section_hero .hero-btn-group {
         flex-direction: column;

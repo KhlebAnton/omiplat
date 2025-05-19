@@ -4,7 +4,15 @@ const bonusBtns = document.querySelectorAll('.btn-bonus');
 bonusBtns.forEach(btn => {
     const bonushidden = btn.closest('.bonus_item').querySelector('.bonus_item-hidden');
     btn.addEventListener('click', ()=> {
-        btn.style.display = 'none';
-        bonushidden.classList.add('open')
+        if(bonushidden.classList.contains('open')) {
+            btn.textContent = 'Подробнее';
+             bonushidden.classList.remove('open')
+        } else {
+            btn.textContent = 'Скрыть';
+
+             bonushidden.classList.add('open')
+        }
+       
+       
     })
 })
