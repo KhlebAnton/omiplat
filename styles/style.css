@@ -4445,7 +4445,10 @@ select option {
 
         margin-top: -40px;
     }
-
+    .steps__items_busines .steps__item,
+.step_bonus .steps__item {
+    gap: 10px;
+}
     .steps__items {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
