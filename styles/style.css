@@ -4432,11 +4432,15 @@ select option {
         gap: 10px;
         padding-bottom: 131px;
     }
-
+.step_bonus .steps_top {
+    padding-bottom: 80px;
+}
     .steps__items_busines .steps_top {
         padding-bottom: 60px;
     }
-
+.step_bonus .steps__items {
+        margin-top: -60px;
+    }
     .steps__items_busines .steps__items {
 
         margin-top: -40px;
