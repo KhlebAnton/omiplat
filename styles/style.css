@@ -3178,6 +3178,8 @@ select option {
     font-weight: 600;
     font-family: 'Montserrat';
     color: #6294F9;
+    top: 3px;
+    line-height: 100%;
 
 }
 
@@ -3192,7 +3194,7 @@ select option {
     width: 12px;
     height: 12px;
     content: '';
-    top: 6px;
+    top: 6.5px;
     left: -17px;
     background: url('../img/point.svg') 50% / contain no-repeat;
 }
@@ -3516,7 +3518,7 @@ select option {
     width: 12px;
     height: 12px;
     content: '';
-    top: 6px;
+    top: 6.5px;
     left: 0;
     background: url(../img/point.svg) 50% / contain no-repeat;
 }
