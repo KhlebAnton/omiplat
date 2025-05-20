@@ -3192,7 +3192,7 @@ select option {
     width: 12px;
     height: 12px;
     content: '';
-    top: 5px;
+    top: 6px;
     left: -17px;
     background: url('../img/point.svg') 50% / contain no-repeat;
 }
@@ -4432,23 +4432,29 @@ select option {
         gap: 10px;
         padding-bottom: 131px;
     }
-.step_bonus .steps_top {
-    padding-bottom: 80px;
-}
+
+    .step_bonus .steps_top {
+        padding-bottom: 80px;
+    }
+
     .steps__items_busines .steps_top {
         padding-bottom: 60px;
     }
-.step_bonus .steps__items {
+
+    .step_bonus .steps__items {
         margin-top: -60px;
     }
+
     .steps__items_busines .steps__items {
 
         margin-top: -40px;
     }
+
     .steps__items_busines .steps__item,
-.step_bonus .steps__item {
-    gap: 10px;
-}
+    .step_bonus .steps__item {
+        gap: 10px;
+    }
+
     .steps__items {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -4610,6 +4616,21 @@ select option {
         margin-top: 20px;
         margin-bottom: 60px;
     }
+
+    .vacancies_item__title {
+        font-size: 20px;
+    }
+
+    .vacancies_item li,
+    .vacancies_item p {
+        font-size: 16px;
+    }
+
+    .vacancies_item ul li::before,
+    .about__info ul li::before,
+    .news-single ul li::before {
+        top: 5px;
+    }
 }
 
 @media (max-width:800px) {
@@ -4668,14 +4689,7 @@ select option {
         height: 205px;
     }
 
-    .vacancies_item__title {
-        font-size: 20px;
-    }
 
-    .vacancies_item li,
-    .vacancies_item p {
-        font-size: 16px;
-    }
 
     .vacancies_content {
         gap: 20px;
