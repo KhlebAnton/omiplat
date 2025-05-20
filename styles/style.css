@@ -4629,7 +4629,7 @@ select option {
     .vacancies_item ul li::before,
     .about__info ul li::before,
     .news-single ul li::before {
-        top: 5px;
+        top: 4px;
     }
 }
 
@@ -5203,12 +5203,7 @@ select option {
         min-width: auto;
     }
 
-    .about__info ul li::before,
-    .news-single ul li::before {
-
-        top: 4px;
-
-    }
+   
 }
 
 @media (max-width:495px) {
