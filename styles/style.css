@@ -5300,3 +5300,19 @@ select option {
         max-width: none;
     }
 }
+.swiper-container_text {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.swiper-container_text .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 0.5s ease;
+    height: auto;
+}
+
+.swiper-container_text .swiper-slide-active {
+    opacity: 1 !important;
+}

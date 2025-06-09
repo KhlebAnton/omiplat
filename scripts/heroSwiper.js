@@ -1,34 +1,39 @@
-const swiper = new Swiper('.swiper-container_img', {
+// Инициализация слайдера изображений
+const imgSwiper = new Swiper('.swiper-container_img', {
     slidesPerView: 1,
     loop: true,
-    
-    // Эффект fade (плавное перетекание)
     effect: 'fade',
     fadeEffect: {
-        crossFade: true // смягчает переход (если нужно)
+        crossFade: true
     },
-    
-    // Автопереключение каждые 5 секунд
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false, // не останавливать после клика
+        disableOnInteraction: false,
     },
-    
-    // Отключение свайпа
     allowTouchMove: true,
-    
-    // Кликабельная пагинация
     pagination: {
         el: '.swiper-pagination_hero',
         clickable: true,
     },
-    
-    // Стрелки навигации
     navigation: {
         nextEl: '.swiper-button-next_hero',
         prevEl: '.swiper-button-prev_hero',
     },
-    
-    // Доп. настройки плавности (опционально)
-    speed: 1000, // длительность перехода в ms (1 сек)
+    speed: 1000,
 });
+
+// Инициализация текстового слайдера
+const textSwiper = new Swiper('.swiper-container_text', {
+    slidesPerView: 1,
+    loop: true,
+    effect: 'slide',
+    fadeEffect: {
+        crossFade: true
+    },
+    allowTouchMove: false, // отключаем свайп для текстового слайдера
+    autoHeight: true, // автоматическая высота под контент
+});
+
+// Синхронизация слайдеров
+imgSwiper.controller.control = textSwiper;
+textSwiper.controller.control = imgSwiper;
